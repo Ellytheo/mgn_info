@@ -24,3 +24,40 @@ yarn-error.log*
 
 .vercel
 # Ignore this video file
+
+
+
+
+
+
+
+
+
+
+</header>
+
+      {menuOpen && (
+        <nav
+          className="mobile-menu"
+          id="mobile-menu"
+          aria-label="Mobile primary navigation"
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            className="close-menu"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <span className="material-icons">close</span>
+          </button>
+          {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
+            <button
+              key={section}
+              className={activeSection === section ? 'active' : ''}
+              onClick={() => handleNavClick(section)}
+              aria-current={activeSection === section ? 'page' : undefined}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          ))}

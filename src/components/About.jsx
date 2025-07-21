@@ -55,7 +55,7 @@ const About = () => {
       <div className='col-md-4 mb-2 mantra-mon'> 
         <div>
                  <img 
-        src={pic4} 
+        src={pic2} 
         alt="Magunas" 
         className="img-fluid rounded shadow-lg" 
         style={{ maxHeight: '300px', objectFit: 'cover', width: '90%' }} 
@@ -73,7 +73,7 @@ const About = () => {
        <div className='col-md-4 mb-2 mantra-mon '>
              <div>
                     <img 
-        src={pic4} 
+        src={pic2} 
         alt="Magunas" 
         className="img-fluid rounded shadow-lg" 
         style={{ maxHeight: '300px', objectFit: 'cover', width: '90%' }} 
