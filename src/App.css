@@ -9,6 +9,7 @@ body {
 
 .App {
   padding-top: 0px;
+  width: 100%;
 }
 
 /* === Typography === */
@@ -124,6 +125,7 @@ footer {
 .what-we-do-card,
 .hover-card,
 .hover-cards {
+  
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
@@ -132,6 +134,7 @@ footer {
 .mantra-car:hover,
 .mantra-cars:hover,
 .mantra-mon:hover {
+   
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   transform: translateY(-7px);
   border-color: #26f041;
@@ -492,7 +495,8 @@ nav a.header-link:hover {
 .learn-more-link {
   background-color: #f1f1f1;
   color: rgb(69, 10, 233);
-  padding: 8px 12px;
+  padding: 2px 12px;
+  margin-top: 10px;
   border-radius: 6px;
   text-decoration: none;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -546,3 +550,4 @@ h2 {
   font-size: 1.5rem;
   margin-top: 50px;
 }
+

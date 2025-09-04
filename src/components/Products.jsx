@@ -1,99 +1,115 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useSpring, animated } from 'react-spring';
 
-const img_url = "https://magino1.pythonanywhere.com/static/images/";
-
-const PromosAndProducts = () => {
-  const [promos, setPromos] = useState([]);
+const Products = () => {
   const [products, setProducts] = useState([]);
+  const [promos, setPromos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [searchTerm, setSearchTerm] = useState(""); // 🔍 NEW
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchProductsAndPromos = async () => {
       try {
-        const promoResponse = await axios.get('https://magino1.pythonanywhere.com/api/get_promos');
-        const productResponse = await axios.get('https://magino1.pythonanywhere.com/api/get_products');
-        setPromos(promoResponse.data.promos || []);
-        setProducts(productResponse.data.products || []);
+        const [productsRes, promosRes] = await Promise.all([
+          fetch('https://magino1.pythonanywhere.com/api/get_products'),
+          fetch('https://magino1.pythonanywhere.com/api/get_promos'),
+        ]);
+
+        if (!productsRes.ok || !promosRes.ok) {
+          throw new Error(
+            `HTTP error! status: ${productsRes.status} ${promosRes.status}`
+          );
+        }
+
+        const productsData = await productsRes.json();
+        const promosData = await promosRes.json();
+
+        // FIXED: Use "photos" from backend response
+        setProducts(productsData.photos || []);
+        setPromos(promosData.photos || []);
+        setLoading(false);
       } catch (err) {
-        setError(err.message || 'Failed to fetch data.');
-      } finally {
+        console.error('Fetch error:', err);
+        setError(err.message);
         setLoading(false);
       }
     };
 
-    fetchData();
+    fetchProductsAndPromos();
   }, []);
 
-  const fadeIn = useSpring({ opacity: loading ? 0 : 1 });
-
-  const ProductCard = ({ item }) => (
-    <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-      <div className="card h-100 shadow-sm">
-        <img
-          src={img_url + item.product_photo}
-          alt={item.product_name}
-          className="card-img-top"
-          style={{ height: '200px', objectFit: 'contain' }}
-        />
-        <div className="card-body d-flex flex-column">
-          <h5 className="text-center card-title">{item.product_name}</h5>
-          <p className="card-text text-center text-muted" style={{ fontSize: '0.9rem', flexGrow: 1 }}>
-            {item.product_description || "No description available"}
-          </p>
-          <p className="fw-bold text-center text-danger">Ksh {item.product_cost}</p>
+  if (loading) {
+    return (
+      <div className="text-center py-5" style={{ minHeight: '400px' }}>
+        <div className="spinner-border text-warning" role="status">
+          <span className="visually-hidden">Loading...</span>
         </div>
+        <p className="mt-3 text-muted">Loading...</p>
       </div>
-    </div>
-  );
+    );
+  }
 
-  // 🔍 Filtered lists
-  const filteredPromos = promos.filter(promo =>
-    promo.product_name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  const filteredProducts = products.filter(product =>
-    product.product_name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
-  if (loading) return <div className="text-center text-warning py-5">Loading...</div>;
-  if (error) return <div className="text-danger text-center py-5">Error: {error}</div>;
+  if (error) {
+    return (
+      <div
+        className="text-center py-5 text-danger"
+        style={{ minHeight: '400px' }}
+      >
+        <h4>Error Loading</h4>
+        <p>{error}</p>
+      </div>
+    );
+  }
 
   return (
-    <animated.div style={fadeIn} className="container m-0 py-2">
-      {/* 🔍 Search Bar */}
-      <div className="m-4 text-center">
-        <input
-          type="text"
-          className="form-control  w-50 mx-auto"
-          placeholder="Search products or promos..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
-      </div>
+    <section className="container-fluid py-5 px-0">
+      <div className="container">
+        {/* Promotions Section */}
+        {promos.length > 0 && (
+          <>
+            <h2 className="text-center mb-4 fw-bold">🎉 Promotions Gallery</h2>
+            <div className="row g-4 mb-5">
+              {promos.map((promo, index) => (
+                <div key={index} className="col-lg-4 col-md-6">
+                  <img
+                    src={`https://magino1.pythonanywhere.com/static/images/${promo.product_photo}`}
+                    alt={`Promo ${index}`}
+                    className="img-fluid rounded shadow"
+                    style={{ objectFit: 'cover', height: '250px', width: '100%' }}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
 
-      <h2 className="fw-bold mb-4 text-center text-danger">Promotions</h2>
-      <div className="row">
-        {filteredPromos.length > 0 ? (
-          filteredPromos.map((promo) => <ProductCard key={promo.promo_id} item={promo} />)
-        ) : (
-          <p className="text-muted text-center">No promotions match your search.</p>
+        {/* Products Section */}
+        {products.length > 0 && (
+          <>
+            <h2 className="text-center m-4 fw-bold">🛒 Products Gallery</h2>
+            <div className="row g-4">
+              {products.map((product, index) => (
+                <div key={index} className="col-lg-4 col-md-6">
+                  <img
+                    src={`https://magino1.pythonanywhere.com/static/images/${product.product_photo}`}
+                    alt={`Product ${index}`}
+                    className="img-fluid rounded shadow"
+                    style={{ objectFit: 'cover', height: '250px', width: '100%' }}
+                  />
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Empty State */}
+        {promos.length === 0 && products.length === 0 && (
+          <div className="text-center py-5" style={{ minHeight: '300px' }}>
+            <h4 className="text-danger">No photos available at the moment.</h4>
+          </div>
         )}
       </div>
-
-      <h2 className="fw-bold mb-4 mt-5 text-danger text-center">Products</h2>
-      <div className="row">
-        {filteredProducts.length > 0 ? (
-          filteredProducts.map((product) => <ProductCard key={product.product_id} item={product} />)
-        ) : (
-          <p className="text-muted text-center">No products match your search.</p>
-        )}
-      </div>
-    </animated.div>
+    </section>
   );
 };
 
-export default PromosAndProducts;
+export default Products;

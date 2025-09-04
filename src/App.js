@@ -1,16 +1,16 @@
 import "./App.css";
 import {
   BrowserRouter,
-  Link,
-  Navigate,
-  Route,
   Routes,
+  Route,
+  Link as RouterLink,
   useNavigate,
 } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useEffect, useState } from "react";
+import { Link as ScrollLink } from "react-scroll"; // 👈 for smooth scroll
 
 // Vercel Analytics import
 import { Analytics } from "@vercel/analytics/react";
@@ -18,19 +18,11 @@ import { Analytics } from "@vercel/analytics/react";
 // Images and components
 import downloadImg from "./images/pic5.jpg";
 import Home from "./components/Home";
-import Feedback from "./components/Feedback";
 import About from "./components/About";
+import Location from "./components/Location";
+import Products from "./components/Products";
 import Impact from "./components/Impact";
-import Business from "./components/Business";
-import Magunashistory from "./components/Magunashistory";
-import Accolades from "./components/Accolades";
-import Opportunities from "./components/Opportunities";
-import Suppliers from "./components/Suppliers";
-import Offers from "./components/Offers";
-import Locations from "./components/Locations";
-import AdminDashboard from "./components/AdminDashboard";
-import LoginPage from "./components/LoginPage";
-import PromosAndProducts from "./components/Products";
+
 
 function AppWrapper() {
   return (
@@ -57,16 +49,13 @@ function App() {
     setMenuOpen(false);
   };
 
-  const links = [
-    { label: "Home", path: "/" },
-    { label: "About Us", path: "/aboutus" },
-    { label: "Location", path: "/location" },
-    { label: "Offers", path: "/offers" },
-    { label: "Opportunity", path: "/opportunities" },
-    { label: "Supplier", path: "/suppliers" },
-    { label: "our products", path: "/products" },
-    { label: "Feedback", path: "/feedback" },
-    { label: "Admin Page", path: "/wp-administration", auth: true },
+  const sectionLinks = [
+    { label: "Home", id: "home" },
+    { label: "About Us", id: "aboutus" },
+    { label: "Location", id: "location" },
+    { label: "Feedback", id: "feedback" },
+    { label: "Our Products", id: "products" },
+    { label: "Impact", id: "impact" },
   ];
 
   return (
@@ -93,8 +82,6 @@ function App() {
             >
               <i className="bi bi-list fs-1 text-dark"></i>
             </button>
-
-
           </div>
 
           {/* Navigation */}
@@ -103,18 +90,31 @@ function App() {
               menuOpen ? "d-flex" : "d-none"
             } flex-column flex-md-row gap-3 align-items-md-center d-md-flex`}
           >
-            {links
-              .filter((link) => !link.auth || isAuthenticated)
-              .map((link) => (
-                <Link
-                  key={link.path}
-                  to={link.path}
-                  className="header-link text-decoration-none fs-6"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+            {/* Scroll Links for in-page sections */}
+            {sectionLinks.map((link) => (
+              <ScrollLink
+                key={link.id}
+                to={link.id}
+                smooth={true}
+                duration={500}
+                offset={-80}
+                className="header-link text-decoration-none fs-6"
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </ScrollLink>
+            ))}
+
+            {/* Router links for separate pages */}
+            {isAuthenticated && (
+              <RouterLink
+                to="/wp-administration"
+                className="header-link text-decoration-none fs-6"
+                onClick={() => setMenuOpen(false)}
+              >
+                Admin Page
+              </RouterLink>
+            )}
 
             {isAuthenticated && (
               <button className="btn btn-outline-danger" onClick={handleLogout}>
@@ -125,40 +125,33 @@ function App() {
         </div>
       </header>
 
-      {/* Routes */}
+      {/* Page Sections */}
+      {/* Page Sections (scroll targets) */}
+<section id="home">
+  <Home />
+</section>
+<section id="aboutus">
+  <About />
+</section>
+<section id="location">
+  <Location />
+</section>
+<section id="products">
+  <Products />
+</section>
+<section id="impact">
+  <Impact />
+</section>
+
+
+
+
+      {/* Routes for real pages */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/aboutus" element={<About />} />
-        <Route path="/impact" element={<Impact />} />
-        <Route path="/business" element={<Business />} />
-        <Route path="/history" element={<Magunashistory />} />
-        <Route path="/accolades" element={<Accolades />} />
-        <Route path="/opportunities" element={<Opportunities />} />
-        <Route path="/suppliers" element={<Suppliers />} />
-        <Route path="/offers" element={<Offers />} />
-        <Route path="/location" element={<Locations />} />
-        <Route path="/products" element={<PromosAndProducts />} />
-        <Route
-          path="/wp-administration"
-          element={
-            isAuthenticated ? (
-              <AdminDashboard setIsAuthenticated={setIsAuthenticated} />
-            ) : (
-              <Navigate to="/loginas" />
-            )
-          }
-        />
-        <Route
-          path="/loginas"
-          element={
-            !isAuthenticated ? (
-              <LoginPage setIsAuthenticated={setIsAuthenticated} />
-            ) : (
-              <Navigate to="/wp-administration" />
-            )
-          }
-        />
+        <Route path="/wp-administration" element={<h2>Admin Page</h2>} />
+        <Route path="/privacy" element={<h2>Privacy Policy</h2>} />
+        <Route path="/terms" element={<h2>Terms of Service</h2>} />
+        
       </Routes>
 
       {/* Footer */}
@@ -169,8 +162,8 @@ function App() {
               <h5 className="text-warning">Maguna Andu Wholesalers</h5>
               <p>
                 Trusted by Murang’a for over two decades. We deliver quality
-                groceries, household goods, and merchandise with affordability and
-                community focus.
+                groceries, household goods, and merchandise with affordability
+                and community focus.
               </p>
             </div>
 
@@ -187,7 +180,7 @@ function App() {
               <p>
                 <i className="bi bi-envelope-fill me-2" />
                 1.customercaregd@maguna-andu.co.ke
-                <br></br>
+                <br />
                 2.salesteam@maguna-andu.co.ke
               </p>
             </div>
@@ -196,27 +189,39 @@ function App() {
               <h6 className="text-warning">Quick Links</h6>
               <ul className="list-unstyled">
                 <li>
-                  <Link to="/aboutus" className="text-white text-decoration-none">
+                  <ScrollLink
+                    to="aboutus"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-white text-decoration-none"
+                  >
                     About Us
-                  </Link>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <Link to="/offers" className="text-white text-decoration-none">
+                  <RouterLink
+                    to="/offers"
+                    className="text-white text-decoration-none"
+                  >
                     Offers
-                  </Link>
+                  </RouterLink>
                 </li>
                 <li>
-                  <Link
+                  <RouterLink
                     to="/opportunities"
                     className="text-white text-decoration-none"
                   >
                     Careers
-                  </Link>
+                  </RouterLink>
                 </li>
                 <li>
-                  <Link to="/feedback" className="text-white text-decoration-none">
+                  <RouterLink
+                    to="/feedback"
+                    className="text-white text-decoration-none"
+                  >
                     Contact
-                  </Link>
+                  </RouterLink>
                 </li>
               </ul>
             </div>
@@ -227,7 +232,7 @@ function App() {
                 <a
                   href="https://facebook.com"
                   className="icon-facebook text-white me-3 fs-5"
-                  target="_blank"   
+                  target="_blank"
                   rel="noreferrer"
                 >
                   <i className="bi bi-facebook" />
@@ -270,15 +275,18 @@ function App() {
               </p>
             </div>
             <div className="col-md-6 text-md-end">
-              <Link
+              <RouterLink
                 to="/privacy"
                 className="text-warning text-decoration-none me-3"
               >
                 Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-warning text-decoration-none">
+              </RouterLink>
+              <RouterLink
+                to="/terms"
+                className="text-warning text-decoration-none"
+              >
                 Terms of Service
-              </Link>
+              </RouterLink>
             </div>
           </div>
         </div>

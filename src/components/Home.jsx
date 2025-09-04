@@ -4,7 +4,7 @@ import pic2 from '../productsimages/mn-20.jpg';
 
 const Home = () => {
   return (
-    <div className="container py-3">
+    <div className="container-fluid py-3 px-0">
     
 
 <div className="container pb-0 pt-0 px-0 mb-0  animated-section">
@@ -16,7 +16,7 @@ const Home = () => {
   }}
   >
     <h2 className="text-uppercase animated-section text-danger fw-bold flashy-heading">How It All Began</h2>
-   <i> <h4 className="text-danger flashy-subheading">“The Journey From Early 1990's”</h4></i>
+   <i> <h4 className="text-danger flashy-subheading">"The Journey From Early 1990's"</h4></i>
   </div>
 
 <div 
@@ -33,7 +33,7 @@ animation: 'gradientShift 12s ease infinite'}}
   Maguna-Andu Wholesalers began as a small family-run business with a mission to serve local communities with quality products at competitive prices. <br />
   Starting from a modest storefront in central Kenya, we steadily grew through dedication to customer service and trusted partnerships with suppliers. <br />
   Over the years, our footprint expanded across counties, becoming a cornerstone in wholesale distribution for small retailers, farmers, and institutions. <br />
-  <a href="/about" className="text-decoration-none learn-more-link text-primary">Learn more about our journey here.</a>
+  <a href="#aboutus" className="text-decoration-none learn-more-link text-primary">Learn more about our journey here.</a>
 </p>
 
     </div>
@@ -68,19 +68,19 @@ animation: 'gradientShift 12s ease infinite'}}
 
       {/* Card 1 */}
       <div className="col-md-6">
-        <div className="bg-white p-4 rounded shadow-sm what-we-do-card h-100">
-          <h5 className="text-warning fw-bold mb-3">We're committed to offering quality products at affordable prices</h5>
-          <p>
-            Every time you walk into any of our stores, you don’t think about how the product got onto our shelf for you to place it in your shopping cart because that’s for us to worry about.
+        <div className="p-4 rounded shadow-lg h-100" style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
+          <h5 className="text-success fw-bold mb-3 fs-4">We're committed to offering quality products at affordable prices</h5>
+          <p className="text-dark" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
+            Every time you walk into any of our stores, you don't think about how the product got onto our shelf for you to place it in your shopping cart because that's for us to worry about.
           </p>
         </div>
       </div>
 
       {/* Card 2 */}
       <div className="col-md-6">
-        <div className="bg-white p-4 rounded shadow-sm what-we-do-card h-100">
-          <h5 className="text-warning fw-bold mb-3">We're always there for you and always at your service</h5>
-          <p>
+        <div className="p-4 rounded shadow-lg h-100" style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
+          <h5 className="text-success fw-bold mb-3 fs-4">We're always there for you and always at your service</h5>
+          <p className="text-dark" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
             Every day, dedicated staff members work together with each one complementing the efforts of the next to make sure that a customer walking into our stores gets all they need in one convenient location: from sourcing the right mix of products, negotiating for the best prices, transporting them to the various stores and meticulously arranging them for easy access. We act as the gatekeepers between the Suppliers and our Shoppers.
           </p>
         </div>
@@ -88,19 +88,19 @@ animation: 'gradientShift 12s ease infinite'}}
 
       {/* Card 3 */}
       <div className="col-md-6">
-        <div className="bg-white p-4 rounded shadow-sm what-we-do-card h-100">
-          <h5 className="text-warning fw-bold mb-3">Freshness, Quality, Variety and Affordability is the only language we speak</h5>
-          <p>
-            Before stocking anything on our shelves there is always a very well thought out catalogue based on the demand and customer preference from the feedback we get because we are a brand that endeavors to always meet and exceed Customer’s need.
+        <div className="p-4 rounded shadow-lg h-100" style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
+          <h5 className="text-success fw-bold mb-3 fs-4">Freshness, Quality, Variety and Affordability is the only language we speak</h5>
+          <p className="text-dark" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
+            Before stocking anything on our shelves there is always a very well thought out catalogue based on the demand and customer preference from the feedback we get because we are a brand that endeavors to always meet and exceed Customer's need.
           </p>
         </div>
       </div>
 
       {/* Card 4 */}
       <div className="col-md-6">
-        <div className="bg-white p-4 rounded shadow-sm what-we-do-card h-100">
-          <h5 className="text-warning fw-bold mb-3">It's not just retail—it's a lifestyle experience</h5>
-          <p>
+        <div className="p-4 rounded shadow-lg h-100" style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
+          <h5 className="text-success fw-bold mb-3 fs-4">It's not just retail—it's a lifestyle experience</h5>
+          <p className="text-dark" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
             For us, it is not just about providing a platform for retail trade but complementing the lifestyles of those who seek our services and offering an experience through our excellent customer service.
           </p>
         </div>
@@ -108,9 +108,9 @@ animation: 'gradientShift 12s ease infinite'}}
 
       {/* Card 5 */}
       <div className="col-12">
-        <div className="bg-white p-4 rounded shadow-sm what-we-do-card">
-          <h5 className="text-warning fw-bold mb-3">Our Collective Growth</h5>
-          <p>
+        <div className="p-4 rounded shadow-lg" style={{ background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(10px)' }}>
+          <h5 className="text-success fw-bold mb-3 fs-4">Our Collective Growth</h5>
+          <p className="text-dark" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
             And with every sale we make we get to grow our contribution to the Kenyan economy by supporting industries, farmers, supporting talent and making an overall impact to the community at large.
           </p>
         </div>
@@ -159,7 +159,7 @@ animation: 'gradientShift 12s ease infinite'}}
   <div className="bg-white bg-opacity-75 rounded p-4 shadow-sm mb-4 mission-card hover-card">
     <h4 className="text-warning fw-bold fs-4 mb-2">Our Mission</h4>
     <p className="fst-italic fs-5 mb-0">
-      “To provide affordable world-class shopping experience”
+      "To provide affordable world-class shopping experience"
     </p>
   </div>
 
@@ -167,7 +167,7 @@ animation: 'gradientShift 12s ease infinite'}}
   <div className="bg-white bg-opacity-75 rounded p-4 shadow-sm mission-card hover-card">
     <h4 className="text-warning fw-bold fs-4 mb-2">Our Vision</h4>
     <p className="fst-italic fs-5 mb-0">
-      “To be a leading retail chain in Eastern Africa”
+      "To be a leading retail chain in Eastern Africa"
     </p>
   </div>
 </div>
@@ -180,13 +180,13 @@ animation: 'gradientShift 12s ease infinite'}}
   {/* Section Title */}
   <div className="text-center mb-5 bootstrap-font">
     <h2 className="text-uppercase text-success fw-bold">Our Mantra</h2>
-    <h5 className="fst-italic text-muted">“Your Trusted Wholesale Partner Since Day One.”</h5>
+    <h5 className="fst-italic text-muted">"Your Trusted Wholesale Partner Since Day One."</h5>
   </div>
 
   {/* Values Grid */}
   <div className="row g-4">
     {/* Teamwork */}
-    <div className="col-12 col-sm-6 col-lg-4 col-xl-3">
+    <div className="col-12 col-sm-6 col-lg-4 col-xl-3 mantra-card">
       <div className="p-4 border rounded bg-light h-100 text-center">
         <h3>👨‍👨‍👧‍👦</h3>
         <h5 className="text-warning fw-bold">Teamwork</h5>
@@ -195,7 +195,7 @@ animation: 'gradientShift 12s ease infinite'}}
     </div>
 
     {/* Quality */}
-    <div className="col-12 col-sm-6 col-lg-4 col-xl-2">
+    <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
       <div className="p-4 border rounded bg-light h-100 text-center">
         <h3>✔</h3>
         <h5 className="text-warning fw-bold">Quality</h5>
@@ -204,7 +204,7 @@ animation: 'gradientShift 12s ease infinite'}}
     </div>
 
     {/* Excellence */}
-    <div className="col-12 col-sm-6 col-lg-4 col-xl-2">
+    <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
       <div className="p-4 border rounded bg-light h-100 text-center">
         <h3>🌟</h3>
         <h5 className="text-warning fw-bold">Excellence</h5>
@@ -213,7 +213,7 @@ animation: 'gradientShift 12s ease infinite'}}
     </div>
 
     {/* Respect */}
-    <div className="col-12 col-sm-6 col-lg-4 col-xl-2">
+    <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
       <div className="p-4 border rounded bg-light h-100 text-center">
         <h3>🤝🏾</h3>
         <h5 className="text-warning fw-bold">Respect</h5>
@@ -222,7 +222,7 @@ animation: 'gradientShift 12s ease infinite'}}
     </div>
 
     {/* Honesty */}
-    <div className="col-12 col-sm-6 col-lg-4 col-xl-3">
+    <div className="col-12 col-sm-6 col-lg-4 mantra-card col-xl-3">
       <div className="p-4 border rounded bg-light h-100 text-center">
         <h3>😇</h3>
         <h5 className="text-warning fw-bold">Honesty</h5>
