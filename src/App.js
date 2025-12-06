@@ -20,7 +20,6 @@ import downloadImg from "./images/pic5.jpg";
 import Home from "./components/Home";
 import About from "./components/About";
 import Location from "./components/Location";
-import Products from "./components/Products";
 import Impact from "./components/Impact";
 
 
@@ -54,7 +53,6 @@ function App() {
     { label: "About Us", id: "aboutus" },
     { label: "Location", id: "location" },
     { label: "Feedback", id: "feedback" },
-    { label: "Our Products", id: "products" },
     { label: "Impact", id: "impact" },
   ];
 
@@ -136,9 +134,6 @@ function App() {
 <section id="location">
   <Location />
 </section>
-<section id="products">
-  <Products />
-</section>
 <section id="impact">
   <Impact />
 </section>
@@ -161,7 +156,7 @@ function App() {
             <div className="col-md-3">
               <h5 className="text-warning">Maguna Andu Wholesalers</h5>
               <p>
-                Trusted by Murang’a for over two decades. We deliver quality
+                Trusted by kenya for over three decades. We deliver quality
                 groceries, household goods, and merchandise with affordability
                 and community focus.
               </p>
@@ -194,34 +189,43 @@ function App() {
                     smooth={true}
                     duration={500}
                     offset={-80}
-                    className="text-white text-decoration-none"
+                    className="text-white text-decoration-none scroll-link"
                   >
-                    About Us
+                    <span className="location-text">About Us</span>
                   </ScrollLink>
                 </li>
                 <li>
-                  <RouterLink
-                    to="/offers"
-                    className="text-white text-decoration-none"
+                  <ScrollLink
+                    to="location"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-white text-decoration-none scroll-link"
                   >
-                    Offers
-                  </RouterLink>
+                    <span className="location-text">Our Location</span>
+                  </ScrollLink>
+                </li>
+                 <li>
+                  <ScrollLink
+                    to="products"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-white text-decoration-none scroll-link"
+                  >
+                    <span className="location-text">Our Products</span>
+                  </ScrollLink>
                 </li>
                 <li>
-                  <RouterLink
-                    to="/opportunities"
-                    className="text-white text-decoration-none"
+                  <ScrollLink
+                    to="impact"
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-white text-decoration-none scroll-link"
                   >
-                    Careers
-                  </RouterLink>
-                </li>
-                <li>
-                  <RouterLink
-                    to="/feedback"
-                    className="text-white text-decoration-none"
-                  >
-                    Contact
-                  </RouterLink>
+                    <span className="location-text">Our Impact</span>
+                  </ScrollLink>
                 </li>
               </ul>
             </div>

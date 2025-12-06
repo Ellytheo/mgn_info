@@ -6,7 +6,7 @@ const About = () => {
       id="about-magunas"
       style={{
         padding: '2rem',
-        background: 'linear-gradient(135deg, rgb(48, 158, 72), rgb(52, 184, 85), rgb(38, 129, 65), rgb(52, 139, 66))',
+        background: 'linear-gradient(135deg, rgba(39, 114, 56, 1), rgba(51, 116, 68, 1), rgba(41, 121, 65, 1), rgb(52, 139, 66))',
         backgroundSize: '400% 400%',
         boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
         borderRadius: '20px',

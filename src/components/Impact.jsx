@@ -7,7 +7,7 @@ const Impact = () => {
 
       <div className='text-white p-4 rounded text-center'
          style={{
-    background: "linear-gradient(135deg,rgb(53, 197, 103),rgb(53, 197, 103))",
+    background: "linear-gradient(135deg,rgba(29, 85, 49, 1),rgb(53, 197, 103))",
     boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
     margin: '2rem 0'
   }}

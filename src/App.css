@@ -442,7 +442,7 @@ nav a.header-link {
 
 nav a.header-link:hover {
   transform: scale(1.03);
-  background-color: rgb(47, 0, 255);
+  background-color: rgb(47, 185, 88);
   color: #f3f2ef;
   border-radius: 10px;
 }
@@ -551,3 +551,25 @@ h2 {
   margin-top: 50px;
 }
 
+.scroll-link {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-link span {
+  color: #f3f1f1;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+}
+
+.scroll-link:hover span {
+  color: #fd0d0d; /* hover color */
+}
+
+.scroll-link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
