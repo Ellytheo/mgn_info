@@ -23,6 +23,13 @@ import heroMain from "./productsimages/mn-21.jpeg";
 import heroBack from "./productsimages/mn-20.jpg";
 import heroSide from "./productsimages/mn-80.jpg";
 
+const heroImages = [
+  { src: heroMain, label: "Main Branch" },
+  { src: heroBack, label: "Warehouse" },
+  { src: heroSide, label: "Products" },
+];
+
+
 
 
 /* ── Scroll-reveal hook ───────────────────────── */
@@ -40,7 +47,7 @@ function useReveal() {
             }
           });
         },
-        { threshold: 0.05, rootMargin: "0px 0px -50px 0px" }
+        { threshold: 0.05, rootMargin: "20px" }
       );
       els.forEach((el) => observer.observe(el));
     };
@@ -85,11 +92,7 @@ function App() {
     }, 400); // Sync with CSS transition
   };
 
-  const heroImages = [
-    { src: heroMain, label: "Main Branch" },
-    { src: heroBack, label: "Warehouse" },
-    { src: heroSide, label: "Products" },
-  ];
+
 
   const navigate = useNavigate();
   useReveal();
@@ -98,6 +101,16 @@ function App() {
     const stored = localStorage.getItem("user");
     setIsAuthenticated(!!stored);
   }, []);
+
+  /* ── Auto-rotate Hero Images (Every 15s) ────────── */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const currentIndex = heroImages.findIndex(img => img.src === activeImg);
+      const nextIndex = (currentIndex + 1) % heroImages.length;
+      updateHeroImg(heroImages[nextIndex].src);
+    }, 15000);
+    return () => clearInterval(interval);
+  }, [activeImg, updateHeroImg]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
