@@ -7,7 +7,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Helmet } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
@@ -83,14 +83,15 @@ function App() {
 
 
 
-  const updateHeroImg = (newImg) => {
+  const updateHeroImg = useCallback((newImg) => {
     if (newImg === activeImg) return;
     setIsSwitching(true);
     setTimeout(() => {
       setActiveImg(newImg);
       setIsSwitching(false);
     }, 400); // Sync with CSS transition
-  };
+  }, [activeImg]);
+
 
 
 

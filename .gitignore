@@ -24,3 +24,5 @@ yarn-error.log*
 
 .vercel
 # Ignore this video file
+
+.vercel
