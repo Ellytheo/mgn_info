@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Main Landing Page -->
   <url>
-    <loc>https://maguna-andu.co.ke/</loc>
+    <loc>https://maguna-andu.com/</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,7 +10,7 @@
   
   <!-- Privacy Policy -->
   <url>
-    <loc>https://maguna-andu.co.ke/privacy</loc>
+    <loc>https://maguna-andu.com/privacy</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -18,7 +18,7 @@
   
   <!-- Terms of Service -->
   <url>
-    <loc>https://maguna-andu.co.ke/terms</loc>
+    <loc>https://maguna-andu.com/terms</loc>
     <lastmod>2026-04-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>

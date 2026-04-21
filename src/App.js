@@ -141,7 +141,7 @@ function App() {
           name="description"
           content="Kenya's trusted wholesale partner since 1990. Serving Murang'a and beyond with quality groceries, household goods, and wholesale merchandise."
         />
-        <link rel="canonical" href="https://maguna-andu.co.ke/" />
+        <link rel="canonical" href="https://maguna-andu.com/" />
       </Helmet>
 
       {/* ════════════════════════════════════════
@@ -387,12 +387,12 @@ function App() {
             <div className="mg-footer__contact-item">
               <i className="bi bi-envelope-fill" />
               <div>
-                <a href="mailto:customercaregd@maguna-andu.co.ke">
-                  customercaregd@maguna-andu.co.ke
+                <a href="mailto:customercaregd@maguna-andu.com">
+                  customercaregd@maguna-andu.com
                 </a>
                 <br />
-                <a href="mailto:salesteam@maguna-andu.co.ke">
-                  salesteam@maguna-andu.co.ke
+                <a href="mailto:salesteam@maguna-andu.com">
+                  salesteam@maguna-andu.com
                 </a>
               </div>
             </div>

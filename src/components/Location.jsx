@@ -32,7 +32,7 @@ const Location = () => {
             { icon: 'bi-geo-alt-fill', text: "Murang'a Town OPP MUWASCO offices" },
             { icon: 'bi-telephone-fill', text: '+254 795 629 890' },
             { icon: 'bi-clock-fill', text: 'Mon – Sat: 7:00 AM – 5:00 PM' },
-            { icon: 'bi-envelope-fill', text: 'customercaregd@maguna-andu.co.ke' },
+            { icon: 'bi-envelope-fill', text: 'customercaregd@maguna-andu.com' },
           ].map((item, i) => (
             <div
               key={i}

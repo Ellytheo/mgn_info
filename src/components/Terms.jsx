@@ -101,7 +101,7 @@ const Terms = () => {
           name="description"
           content="Read the Maguna-Andu Wholesalers Terms of Service. Governed by the laws of Kenya, including the Consumer Protection Act and Sale of Goods Act."
         />
-        <link rel="canonical" href="https://maguna-andu.co.ke/terms" />
+        <link rel="canonical" href="https://maguna-andu.com/terms" />
       </Helmet>
       <style>{`
         /* Nav */
@@ -267,7 +267,7 @@ const Terms = () => {
         <main>
           <Section id="acceptance" title="1. Acceptance of Terms">
             <p style={{ marginBottom: "1rem" }}>
-              By visiting our stores, accessing our website at <strong>maguna-andu.co.ke</strong>, placing an order, or entering into any business arrangement with Maguna-Andu Wholesalers (K) Ltd, you confirm that you have read, understood, and agree to be legally bound by these Terms of Service.
+              By visiting our stores, accessing our website at <strong>maguna-andu.com</strong>, placing an order, or entering into any business arrangement with Maguna-Andu Wholesalers (K) Ltd, you confirm that you have read, understood, and agree to be legally bound by these Terms of Service.
             </p>
             <p>
               These Terms apply to all customers — including retail shoppers, wholesale buyers, institutional clients, and B2B partners. If you do not agree with any part of these Terms, you should not use our services.
@@ -379,7 +379,7 @@ const Terms = () => {
             <ul style={{ listStyle: "none", padding: 0, display: "flex", flexDirection: "column", gap: "0.45rem" }}>
               <Li>Approved refunds are processed within <strong>7 working days</strong> via the original payment method.</Li>
               <Li>Wholesale refunds may be settled via <strong>credit notes</strong> applicable to future orders, unless a cash refund is agreed in writing.</Li>
-              <Li>To initiate a return, contact: <strong>customercaregd@maguna-andu.co.ke</strong> or call <strong>+254 795 629 890</strong>.</Li>
+              <Li>To initiate a return, contact: <strong>customercaregd@maguna-andu.com</strong> or call <strong>+254 795 629 890</strong>.</Li>
             </ul>
           </Section>
 
@@ -490,8 +490,8 @@ const Terms = () => {
                 </div>
                 {[
                   ["bi-geo-alt", "Murang'a Town, opposite MUWASCO, Murang'a County, Kenya"],
-                  ["bi-envelope", "customercaregd@maguna-andu.co.ke"],
-                  ["bi-envelope-fill", "salesteam@maguna-andu.co.ke"],
+                  ["bi-envelope", "customercaregd@maguna-andu.com"],
+                  ["bi-envelope-fill", "salesteam@maguna-andu.com"],
                   ["bi-telephone", "+254 795 629 890"],
                 ].map(([icon, val]) => (
                   <div key={val} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", marginBottom: "0.65rem", fontSize: "0.9rem", color: "rgba(255,255,255,0.78)" }}>
