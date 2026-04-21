@@ -101,7 +101,7 @@ const Terms = () => {
           name="description"
           content="Read the Maguna-Andu Wholesalers Terms of Service. Governed by the laws of Kenya, including the Consumer Protection Act and Sale of Goods Act."
         />
-        <link rel="canonical" href="https://maguna-andu.com/terms" />
+        <link rel="canonical" href="https://maguna-anduwholesalers.com/terms" />
       </Helmet>
       <style>{`
         /* Nav */
@@ -267,7 +267,7 @@ const Terms = () => {
         <main>
           <Section id="acceptance" title="1. Acceptance of Terms">
             <p style={{ marginBottom: "1rem" }}>
-              By visiting our stores, accessing our website at <strong>maguna-andu.com</strong>, placing an order, or entering into any business arrangement with Maguna-Andu Wholesalers (K) Ltd, you confirm that you have read, understood, and agree to be legally bound by these Terms of Service.
+              By visiting our stores, accessing our website at <strong>maguna-anduwholesalers.com</strong>, placing an order, or entering into any business arrangement with Maguna-Andu Wholesalers (K) Ltd, you confirm that you have read, understood, and agree to be legally bound by these Terms of Service.
             </p>
             <p>
               These Terms apply to all customers — including retail shoppers, wholesale buyers, institutional clients, and B2B partners. If you do not agree with any part of these Terms, you should not use our services.

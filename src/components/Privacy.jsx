@@ -103,7 +103,7 @@ const Privacy = () => {
           name="description"
           content="Review the Maguna-Andu Wholesalers Privacy Policy. Our commitment to protecting your personal data in compliance with the Kenya Data Protection Act (DPA 2019)."
         />
-        <link rel="canonical" href="https://maguna-andu.com/privacy" />
+        <link rel="canonical" href="https://maguna-anduwholesalers.com/privacy" />
       </Helmet>
       <style>{`
         .legal-page { background: var(--page-bg); min-height: 100vh; }

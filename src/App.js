@@ -141,7 +141,7 @@ function App() {
           name="description"
           content="Kenya's trusted wholesale partner since 1990. Serving Murang'a and beyond with quality groceries, household goods, and wholesale merchandise."
         />
-        <link rel="canonical" href="https://maguna-andu.com/" />
+        <link rel="canonical" href="https://maguna-anduwholesalers.com/" />
       </Helmet>
 
       {/* ════════════════════════════════════════
