@@ -276,8 +276,8 @@ const Privacy = () => {
                 {[
                   ["Entity Name", "Maguna-Andu Wholesalers (K) Ltd"],
                   ["Physical Address", "Murang'a Town, opposite MUWASCO, Murang'a County, Kenya"],
-                  ["Customer Email", "customercaregd@maguna-andu.com"],
-                  ["Sales Email", "salesteam@maguna-andu.com"],
+                  ["Customer Email", "customercaregd@maguna-andu.co.ke"],
+                  ["Sales Email", "salesteam@maguna-andu.co.ke"],
                   ["Phone", "+254 795 629 890"],
                 ].map(([k, v]) => (
                   <li key={k} style={{ display: "flex", gap: "0.75rem", fontSize: "0.88rem" }}>
@@ -480,7 +480,7 @@ const Privacy = () => {
                 {[
                   ["bi-building", "Maguna-Andu Wholesalers (K) Ltd"],
                   ["bi-geo-alt", "Murang'a Town, opposite MUWASCO, Murang'a County"],
-                  ["bi-envelope", "customercaregd@maguna-andu.com"],
+                  ["bi-envelope", "customercaregd@maguna-andu.co.ke"],
                   ["bi-telephone", "+254 795 629 890"],
                 ].map(([icon, val]) => (
                   <div key={val} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", marginBottom: "0.65rem", fontSize: "0.9rem", color: "rgba(255,255,255,0.78)" }}>

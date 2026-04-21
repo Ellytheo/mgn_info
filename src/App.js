@@ -387,12 +387,12 @@ function App() {
             <div className="mg-footer__contact-item">
               <i className="bi bi-envelope-fill" />
               <div>
-                <a href="mailto:customercaregd@maguna-andu.com">
-                  customercaregd@maguna-andu.com
+                <a href="mailto:customercaregd@maguna-andu.co.ke">
+                  customercaregd@maguna-andu.co.ke
                 </a>
                 <br />
-                <a href="mailto:salesteam@maguna-andu.com">
-                  salesteam@maguna-andu.com
+                <a href="mailto:salesteam@maguna-andu.co.ke">
+                  salesteam@maguna-andu.co.ke
                 </a>
               </div>
             </div>
