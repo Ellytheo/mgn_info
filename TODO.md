@@ -1,10 +1,11 @@
-# TODO for merging Business.jsx and Magunashistory.jsx into About.jsx
+# Fix Home/About White Space (Reveal Anim Issue)
 
-- [x] Backup current About.jsx content.
-- [ ] Combine JSX content from Business.jsx into About.jsx.
-- [ ] Combine JSX content from Magunashistory.jsx into About.jsx.
-- [ ] Update About.jsx imports to include images from Business.jsx and Magunashistory.jsx.
-- [ ] Remove links to /business and /history pages in About.jsx.
-- [ ] Ensure consistent styling and layout across merged content.
-- [ ] Test About.jsx rendering and functionality.
-- [ ] Optionally remove Business.jsx and Magunashistory.jsx if no longer needed (ask user).
+## Steps
+1. [ ] Update App.css .reveal styles for immediate visibility
+2. [x] Run `npm start`
+3. [x] Test scroll to #home-content - content visible?
+4. [ ] [ ] Add dev server check/console logs if needed
+5. [ ] Test About #aboutus same.
+6. [ ] [Complete] attempt_completion
+
+Progress: Planning

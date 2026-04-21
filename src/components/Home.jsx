@@ -1,382 +1,275 @@
 import React, { useEffect } from "react";
-import anime from "animejs/lib/anime.es.js"; // ✅ Correct import for v3
-import pic1 from "../productsimages/mn-21.jpg";
-import pic2 from "../productsimages/mn-20.jpg";
+import anime from "animejs/lib/anime.es.js";
+import pic2 from "../productsimages/mn-21.jpeg";
+
+/* Icons via lucide-react style — using Bootstrap Icons instead (already imported) */
+
+const whatWeDoCards = [
+  {
+    icon: "bi-bag-check-fill",
+    title: "Affordable Quality Products",
+    text: "Every time you walk into any of our stores, you find exactly what you need — quality products at prices that make life easier.",
+  },
+  {
+    icon: "bi-people-fill",
+    title: "Always At Your Service",
+    text: "Dedicated staff work in unison — from sourcing and logistics to shelving and service — so every visit is seamless.",
+  },
+  {
+    icon: "bi-stars",
+    title: "Freshness & Variety",
+    text: "Our catalogue is constantly refined based on real customer feedback. Freshness, Quality, Variety, and Affordability — always.",
+  },
+  {
+    icon: "bi-heart-fill",
+    title: "A Lifestyle Experience",
+    text: "It's not just retail — it's an experience. We complement the lifestyles of those who seek our services through excellent customer care.",
+  },
+];
+
+const mantras = [
+  { icon: "bi-people-fill", title: "Teamwork", text: "Associates aligned around common goals through mutual support." },
+  { icon: "bi-shield-check", title: "Quality", text: "Top-quality products and services, always." },
+  { icon: "bi-trophy-fill", title: "Excellence", text: "A culture of continuous improvement." },
+  { icon: "bi-hand-thumbs-up", title: "Respect", text: "Respecting each other and honouring diverse cultures." },
+  { icon: "bi-patch-check", title: "Honesty", text: "Ethical, accountable and transparent in all dealings." },
+];
+
+
 
 const Home = () => {
+
   useEffect(() => {
-    // Heading animations
+    // Heading reveal
     anime({
-      targets: ".flashy-heading",
-      translateY: [-50, 0],
+      targets: ".mg-hero-anim",
+      translateY: [-40, 0],
       opacity: [0, 1],
-      duration: 1200,
+      duration: 900,
+      delay: anime.stagger(120),
       easing: "easeOutExpo",
-    });
-
-    anime({
-      targets: ".flashy-subheading",
-      translateX: [-100, 0],
-      opacity: [0, 1],
-      duration: 1500,
-      delay: 400,
-      easing: "easeOutExpo",
-    });
-
-    // Card animations (staggered)
-    anime({
-      targets: ".hover-card, .mantra-card",
-      opacity: [0, 1],
-      translateY: [40, 0],
-      delay: anime.stagger(200, { start: 600 }),
-      easing: "easeOutExpo",
-    });
-
-    // Image animations
-    anime({
-      targets: ".animated-image",
-      scale: [0.9, 1],
-      opacity: [0, 1],
-      duration: 1500,
-      easing: "easeOutElastic(1, .6)",
     });
   }, []);
 
   return (
-    <div className="container-fluid py-3 px-0">
-      <div className="container pb-0 pt-0 px-0 mb-0 animated-section">
-        {/* Section 1: Center Aligned */}
-        <div
-          className="mb-3 text-center"
-          style={{
-            background:
-              "linear-gradient(135deg,rgb(98, 199, 131),rgb(96, 204, 134))",
-          }}
-        >
-          <h2 className="text-uppercase animated-section text-danger fw-bold flashy-heading">
-            How It All Began
-          </h2>
-          <i>
-            <h4 className="text-danger flashy-subheading">
-              "The Journey From Early 1990's"
-            </h4>
-          </i>
-        </div>
+    <>
+      {/* ════════════════════════════════════════
+          HOW IT ALL BEGAN — Split layout
+          ════════════════════════════════════════ */}
+      <section className="mg-section mg-section--white">
+        <div className="mg-section__inner">
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "4rem",
+              alignItems: "center",
+            }}
+            className="reveal"
+          >
+            {/* Text */}
+            <div className="reveal-left">
+              <div className="mg-section__label">Our Story</div>
+              <h2 className="mg-section__title reveal delay-1">
+                How It All <em>Began</em>
+              </h2>
+              <p className="mg-section__desc">
+                Maguna-Andu Wholesalers began as a small family-run business with a mission to
+                serve local communities with quality products at competitive prices. Starting from
+                a modest storefront in central Kenya, we steadily grew through dedication to
+                customer service and trusted supplier partnerships.
+              </p>
+              <p style={{ color: "var(--text-500)", lineHeight: "1.75", marginBottom: "2.5rem" }}>
+                Over the years, our footprint expanded across counties, becoming a cornerstone in
+                wholesale distribution for small retailers, farmers, and institutions.
+              </p>
+              <a href="#aboutus" className="btn-mg-green reveal" style={{ textDecoration: "none" }}>
+                Full Story <i className="bi bi-arrow-right ms-1" />
+              </a>
+            </div>
 
-        <div
-          style={{
-            background:
-              "linear-gradient(135deg,rgb(130, 233, 188),rgb(17, 173, 93))",
-            animation: "gradientShift 12s ease infinite",
-          }}
-        >
-          <div className="container py-5 pt-0">
+            {/* Image with clay shadow */}
             <div
-              className="row align-items-center"
-              style={{ minHeight: "400px" }}
+              className="reveal-right"
+              style={{
+                borderRadius: "var(--r-lg)",
+                overflow: "hidden",
+                boxShadow: "var(--clay-lg)",
+                border: "4px solid rgba(7, 31, 16, 0.08)",
+                transform: "perspective(1200px) rotateY(-8deg)",
+                transition: "all 0.6s var(--ease-spring)",
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.transform = "perspective(1200px) rotateY(0deg) scale(1.02)")}
+              onMouseLeave={(e) => (e.currentTarget.style.transform = "perspective(1200px) rotateY(-8deg) scale(1)")}
             >
-              {/* Left Side: Text Centered Vertically */}
-              <div className="col-md-6 d-flex flex-column justify-content-center text-center text-md-end pe-md-5">
-                <h4 className="fw-bold text-danger display-6">
-                  We Started As Maguna-Andu Stores
-                </h4>
-                <p className="fs-5 text-dark">
-                  Maguna-Andu Wholesalers began as a small family-run business
-                  with a mission to serve local communities with quality
-                  products at competitive prices. <br />
-                  Starting from a modest storefront in central Kenya, we
-                  steadily grew through dedication to customer service and
-                  trusted partnerships with suppliers. <br />
-                  Over the years, our footprint expanded across counties,
-                  becoming a cornerstone in wholesale distribution for small
-                  retailers, farmers, and institutions. <br />
-                  <a
-                    href="#aboutus"
-                    className="text-decoration-none learn-more-link text-primary"
-                  >
-                    Learn more about our journey here.
-                  </a>
-                </p>
-              </div>
-
-              {/* Right Side: Larger Image */}
-              <div className="col-md-6 text-center">
-                <img
-                  src={pic2}
-                  alt="Magunas"
-                  className="img-fluid rounded shadow-lg animated-image"
-                  style={{
-                    maxHeight: "360px",
-                    objectFit: "cover",
-                    width: "90%",
-                  }}
-                />
+              <img src={pic2} alt="Maguna-Andu Wholesalers original storefront in Murang'a" style={{ width: "100%", height: "420px", objectFit: "cover" }} />
+              <div className="mg-hero__card-label" style={{ background: "rgba(7,31,16,0.85)", backdropFilter: "blur(8px)" }}>
+                <i className="bi bi-calendar-event me-2" /> Since 1990 — A Legacy of Trust
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Section: What Do We Do */}
-      <div className="container-fluid py-0 px-0 pb-5 mb-3">
-        <div
-          className="text-center mb-3 mt-2 pt-1"
-          style={{
-            background:
-              "linear-gradient(135deg,rgb(59, 163, 94),rgb(151, 228, 178))",
-          }}
-        >
-          <h2 className="text-danger fw-bold display-5">What Do We Do?</h2>
-        </div>
 
-        <div className="container">
-          <div className="row g-4">
-            {/* Card 1 */}
-            <div className="col-md-6">
-              <div
-                className="p-4 rounded shadow-lg h-100 hover-card"
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <h5 className="text-success fw-bold mb-3 fs-4">
-                  We're committed to offering quality products at affordable
-                  prices
-                </h5>
-                <p
-                  className="text-dark"
-                  style={{ fontSize: "1.05rem", lineHeight: "1.6" }}
-                >
-                  Every time you walk into any of our stores, you don't think
-                  about how the product got onto our shelf for you to place it
-                  in your shopping cart because that's for us to worry about.
-                </p>
+
+      {/* ════════════════════════════════════════
+          WHAT DO WE DO — Claymorphism cards
+          ════════════════════════════════════════ */}
+      <section className="mg-section mg-section--light">
+        <div className="mg-section__inner">
+          <div className="mg-section__header mg-section__header--center">
+            <div className="mg-section__label">What We Do</div>
+            <h2 className="mg-section__title reveal delay-1">Built Around <em>You</em></h2>
+            <p className="mg-section__desc">
+              From sourcing to shelving, every step we take is designed to make your
+              shopping experience effortless and rewarding.
+            </p>
+          </div>
+
+          <div className="mg-clay-grid">
+            {whatWeDoCards.map((card, i) => (
+              <div className={`mg-clay-card reveal delay-${(i % 3) + 1}`} key={i}>
+                <div className="mg-clay-card__icon">
+                  <i className={`bi ${card.icon}`} style={{ fontSize: "1.4rem" }} />
+                </div>
+                <h3 className="mg-clay-card__title">{card.title}</h3>
+                <p className="mg-clay-card__text">{card.text}</p>
+                <div className="mg-card-glass-glow" />
               </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="col-md-6">
-              <div
-                className="p-4 rounded shadow-lg h-100 hover-card"
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <h5 className="text-success fw-bold mb-3 fs-4">
-                  We're always there for you and always at your service
-                </h5>
-                <p
-                  className="text-dark"
-                  style={{ fontSize: "1.05rem", lineHeight: "1.6" }}
-                >
-                  Every day, dedicated staff members work together with each one
-                  complementing the efforts of the next to make sure that a
-                  customer walking into our stores gets all they need in one
-                  convenient location: from sourcing the right mix of products,
-                  negotiating for the best prices, transporting them to the
-                  various stores and meticulously arranging them for easy
-                  access. We act as the gatekeepers between the Suppliers and
-                  our Shoppers.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="col-md-6">
-              <div
-                className="p-4 rounded shadow-lg h-100 hover-card"
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <h5 className="text-success fw-bold mb-3 fs-4">
-                  Freshness, Quality, Variety and Affordability is the only
-                  language we speak
-                </h5>
-                <p
-                  className="text-dark"
-                  style={{ fontSize: "1.05rem", lineHeight: "1.6" }}
-                >
-                  Before stocking anything on our shelves there is always a very
-                  well thought out catalogue based on the demand and customer
-                  preference from the feedback we get because we are a brand
-                  that endeavors to always meet and exceed Customer's need.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="col-md-6">
-              <div
-                className="p-4 rounded shadow-lg h-100 hover-card"
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <h5 className="text-success fw-bold mb-3 fs-4">
-                  It's not just retail—it's a lifestyle experience
-                </h5>
-                <p
-                  className="text-dark"
-                  style={{ fontSize: "1.05rem", lineHeight: "1.6" }}
-                >
-                  For us, it is not just about providing a platform for retail
-                  trade but complementing the lifestyles of those who seek our
-                  services and offering an experience through our excellent
-                  customer service.
-                </p>
-              </div>
-            </div>
-
-            {/* Card 5 */}
-            <div className="col-12">
-              <div
-                className="p-4 rounded shadow-lg hover-card"
-                style={{
-                  background: "rgba(255,255,255,0.9)",
-                  backdropFilter: "blur(10px)",
-                }}
-              >
-                <h5 className="text-success fw-bold mb-3 fs-4">
-                  Our Collective Growth
-                </h5>
-                <p
-                  className="text-dark"
-                  style={{ fontSize: "1.05rem", lineHeight: "1.6" }}
-                >
-                  And with every sale we make we get to grow our contribution to
-                  the Kenyan economy by supporting industries, farmers,
-                  supporting talent and making an overall impact to the
-                  community at large.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Section: Why Do We Exist */}
-      <div
-        className="container-fluid py-0 px-0 pb-1"
-        style={{
-          background:
-            "linear-gradient(135deg,rgb(237, 243, 239),rgb(10, 216, 82))",
-        }}
-      >
-        <div
-          className="text-center mb-0 pb-1"
-          style={{
-            background:
-              "linear-gradient(135deg,rgb(72, 189, 111),rgb(151, 240, 182))",
-          }}
-        >
-          <h2 className="display-5 fw-bold text-danger section-title">
-            Why Do We Exist?
-          </h2>
-        </div>
-
-        <div className="container px-5 py-1">
-          <div className="row align-items-center justify-content-between">
-            {/* Left: Image */}
-            <div className="col-md-5 text-center mb-4 mb-md-0 px-5">
-              <div className="parallelogram-wrapper mx-auto">
-                <img
-                  src={pic1}
-                  alt="Mission Visual"
-                  className="img-fluid parallelogram-img animated-image"
-                />
-              </div>
-            </div>
-
-            {/* Right: Mission & Vision */}
-            <div className="col-md-5">
-              <div className="bg-white bg-opacity-75 rounded p-4 shadow-sm mb-4 mission-card hover-card">
-                <h4 className="text-warning fw-bold fs-4 mb-2">Our Mission</h4>
-                <p className="fst-italic fs-5 mb-0">
-                  "To provide affordable world-class shopping experience"
-                </p>
-              </div>
-
-              <div className="bg-white bg-opacity-75 rounded p-4 shadow-sm mission-card hover-card">
-                <h4 className="text-warning fw-bold fs-4 mb-2">Our Vision</h4>
-                <p className="fst-italic fs-5 mb-0">
-                  "To be a leading retail chain in Eastern Africa"
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Section: Our Mantra */}
-      <div className="container py-5">
-        <div className="text-center mb-5 bootstrap-font">
-          <h2 className="text-uppercase text-success fw-bold">Our Mantra</h2>
-          <h5 className="fst-italic text-muted">
-            "Your Trusted Wholesale Partner Since Day One."
-          </h5>
-        </div>
-
-        <div className="row g-4">
-          {/* Values */}
-          <div className="col-12 col-sm-6 col-lg-4 col-xl-3 mantra-card">
-            <div className="p-4 border rounded bg-light h-100 text-center">
-              <h3>👨‍👨‍👧‍👦</h3>
-              <h5 className="text-warning fw-bold">Teamwork</h5>
-              <p>
-                Company associates working towards common organizational goals
-                through mutual support.
+      {/* ════════════════════════════════════════
+          WHY DO WE EXIST — Dark glass (Mission/Vision)
+          ════════════════════════════════════════ */}
+      <section className="mg-section mg-section--green">
+        <div className="mg-section__inner">
+          <div
+            style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}
+            className="reveal"
+          >
+            {/* Mission + Vision */}
+            <div>
+              <div className="mg-section__label">Why We Exist</div>
+              <h2 className="mg-section__title">
+                Driven by <em>Purpose</em>
+              </h2>
+              <p className="mg-section__desc">
+                Our mission and vision shape every decision — from the brands we stock to
+                the communities we serve.
               </p>
+              <div className="mg-mission-grid" style={{ marginTop: "1.5rem" }}>
+                <div className="mg-glass-card reveal delay-2">
+                  <div className="mg-glass-card__label">Our Mission</div>
+                  <div className="mg-glass-card__title">Affordable World-Class Shopping</div>
+                  <p className="mg-glass-card__text">
+                    "To provide an affordable, world-class shopping experience for every Kenyan."
+                  </p>
+                </div>
+                <div className="mg-glass-card reveal delay-3">
+                  <div className="mg-glass-card__label">Our Vision</div>
+                  <div className="mg-glass-card__title">Leading Retail Chain in East Africa</div>
+                  <p className="mg-glass-card__text">
+                    "To be the most trusted and dependable retail chain across Eastern Africa."
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
-            <div className="p-4 border rounded bg-light h-100 text-center">
-              <h3>✔</h3>
-              <h5 className="text-warning fw-bold">Quality</h5>
-              <p>
-                The company shall strive to provide quality products and
-                services to its customers.
+            {/* Collective Growth card */}
+            <div
+              className="reveal delay-2"
+              style={{
+                background: "rgba(255,255,255,0.07)",
+                backdropFilter: "blur(16px)",
+                border: "1px solid rgba(255,255,255,0.15)",
+                borderRadius: "var(--r-xl)",
+                padding: "2.5rem",
+              }}
+            >
+              <div
+                style={{
+                  width: "52px", height: "52px",
+                  borderRadius: "var(--r-md)",
+                  background: "rgba(245,166,35,0.2)",
+                  border: "1px solid rgba(245,166,35,0.3)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  color: "var(--amber-light)",
+                  fontSize: "1.5rem",
+                  marginBottom: "1.25rem",
+                }}
+              >
+                <i className="bi bi-graph-up-arrow" />
+              </div>
+              <h3
+                style={{
+                  fontFamily: "var(--font-head)", fontSize: "1.3rem",
+                  fontWeight: 800, color: "#fff", marginBottom: "1rem",
+                }}
+              >
+                Our Collective Growth
+              </h3>
+              <p style={{ color: "rgba(255,255,255,0.72)", lineHeight: "1.75" }}>
+                With every sale we make, we grow our contribution to the Kenyan economy
+                by supporting industries, farmers, and talent — creating an overall positive
+                impact on the community at large.
               </p>
+              <div
+                style={{
+                  display: "flex", gap: "1.5rem", marginTop: "2rem",
+                  padding: "1.25rem", background: "rgba(255,255,255,0.06)",
+                  borderRadius: "var(--r-md)", border: "1px solid rgba(255,255,255,0.1)",
+                  flexWrap: "wrap",
+                }}
+              >
+                {[["KSh B+", "Revenue Impact"], ["1000s", "Jobs Created"], ["35+", "Counties Served"]].map(([val, lbl]) => (
+                  <div key={lbl}>
+                    <div style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 900, color: "#fff" }}>{val}</div>
+                    <div style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", marginTop: "2px" }}>{lbl}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
-            <div className="p-4 border rounded bg-light h-100 text-center">
-              <h3>🌟</h3>
-              <h5 className="text-warning fw-bold">Excellence</h5>
-              <p>Setting a culture of continuous improvement.</p>
-            </div>
+          <style>{`
+            @media (max-width: 768px) {
+              .mg-mission-grid { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════
+          OUR MANTRA — Claymorphism pills
+          ════════════════════════════════════════ */}
+      <section className="mg-section mg-section--white">
+        <div className="mg-section__inner">
+          <div className="mg-section__header mg-section__header--center">
+            <div className="mg-section__label">Our Values</div>
+            <h2 className="mg-section__title reveal delay-1">Our <em>Mantra</em></h2>
+            <p className="mg-section__desc reveal delay-2">
+              "Your Trusted Wholesale Partner Since Day One." These five values guide everything we do.
+            </p>
           </div>
 
-          <div className="col-12 col-sm-6 col-lg-4 col-xl-2 mantra-card">
-            <div className="p-4 border rounded bg-light h-100 text-center">
-              <h3>🤝🏾</h3>
-              <h5 className="text-warning fw-bold">Respect</h5>
-              <p>
-                Respect for each other and acknowledgment of diverse cultures in
-                the company.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-12 col-sm-6 col-lg-4 mantra-card col-xl-3">
-            <div className="p-4 border rounded bg-light h-100 text-center">
-              <h3>😇</h3>
-              <h5 className="text-warning fw-bold">Honesty</h5>
-              <p>
-                The company will be ethical, accountable, and transparent in its
-                dealings with all stakeholders.
-              </p>
-            </div>
+          <div className="mg-mantra-grid">
+            {mantras.map((m, i) => (
+              <div className="mg-mantra-pill reveal" key={i}>
+                <div className="mg-mantra-pill__icon">
+                  <i className={`bi ${m.icon}`} />
+                </div>
+                <div className="mg-mantra-pill__title">{m.title}</div>
+                <p className="mg-mantra-pill__text">{m.text}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 

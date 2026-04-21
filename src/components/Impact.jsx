@@ -1,126 +1,194 @@
-import React from 'react';
-import pic5 from '../productsimages/mn-24.jpg'; 
+import React from "react";
+import pic5 from "../productsimages/mn-24.jpg";
+
+const impactSections = [
+  {
+    num: "01",
+    title: "Occupational Health & Safety (OHS)",
+    items: [
+      "Workplace Risk Assessments",
+      "Joint Health and Safety Committees",
+      "Routine Workplace Inspections",
+      "Fire Safety Implementation",
+      "Annual Third-Party Safety Audits",
+      "Health & Safety off-days",
+      "Pre-Annual & Exit Medical Exams",
+      "Traffic and Transport Safety Management",
+    ],
+    note: "All workplace incidents must be reported within 24 hours. Immediate investigation and action follow each incident.",
+  },
+  {
+    num: "02",
+    title: "Corporate Social Responsibility (CSR)",
+    items: [
+      "Menstrual Hygiene Programs",
+      "Charity Activations and Donations",
+      "Coin Collection Drives",
+      "Sourcing 2 Equal Project (Gender Equality in Procurement)",
+    ],
+  },
+  {
+    num: "03",
+    title: "Food Safety & Hygiene",
+    items: [
+      "ISO 22000 Certification underway at select branches",
+      "Standardized Food Safety and Hygiene Protocols",
+      "Staff Training on Food Handling",
+    ],
+  },
+  {
+    num: "04",
+    title: "ESG Achievements",
+    items: [
+      "ESMS Training across all branches",
+      "Fire Safety Awareness Programs",
+      "Traffic Control Training & Video Education",
+      "Annual Compliance Audits (Environment, OHS, Fire)",
+      "Medical Surveillance encouragement",
+      "PPE Program (Training and Distribution)",
+      "Annual Electrical Installation Inspections",
+    ],
+  },
+];
+
+const pillars = [
+  { icon: "bi-tree-fill", label: "Environmental Management" },
+  { icon: "bi-shield-fill-check", label: "Occupational Health & Safety" },
+  { icon: "bi-people-fill", label: "Corporate Social Responsibility" },
+  { icon: "bi-apple", label: "Food Safety" },
+];
 
 const Impact = () => {
   return (
-    <div className="container-fluid px-0">
-
-      <div className='text-white p-4 rounded text-center'
-         style={{
-    background: "linear-gradient(135deg,rgba(29, 85, 49, 1),rgb(53, 197, 103))",
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.3)',
-    margin: '2rem 0'
-  }}
-      >
-      <h1 className="text-warning fw-bold" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}>Magunas ESG and Occupational Health & Safety (OHS) Framework</h1>
-       <hr className="divider" style={{ borderColor: '#ffc107', borderWidth: '2px' }}></hr>
-        <div className="p-4 rounded text-center" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-        <h2 className="text-warning fw-bold fs-2">1. Occupational Health and Safety (OHS)</h2>
-        <h3 className="text-light">What We've Done</h3>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-          At Magunas, we are committed to ensuring the safety and well-being of all our employees.
-          Our OHS Program is compliant with legal standards and focuses on accident prevention,
-          safety awareness, and accountability.
-        </p>
-
-        <h4 className="text-warning fw-bold fs-3">Key Components of Our OHS Program:</h4>
-        <div className='row justify-content-center'>
-        <div className='col-md-6'>
-        <ul className="text-light text-start" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <li>Workplace Risk Assessments</li>
-          <li>Joint Health and Safety Committees</li>
-          <li>Routine Workplace Inspections</li>
-          <li>Fire Safety Implementation</li>
-          <li>Annual Third-Party Safety Audits</li>
-          <li>Ongoing Health & Safety Training</li>
-          <li>Pre-Annual & Exit Medical Exams</li>
-          <li>Traffic and Transport Safety Management</li>
-        </ul>
+    <section className="mg-section mg-section--light">
+      <div className="mg-section__inner">
+        {/* Header */}
+        <div className="mg-section__header mg-section__header--center">
+          <div className="mg-section__label reveal">Sustainability</div>
+          <h2 className="mg-section__title reveal delay-1">
+            ESG &amp; <em>Impact</em> Framework
+          </h2>
+          <p className="mg-section__desc reveal delay-2">
+            Operating today with the future in mind — our ESG programme aligns
+            workplace safety, community development, food integrity, and environmental
+            responsibility.
+          </p>
         </div>
 
-        <div className='col-md-5 text-center'>
-          <img 
-        src={pic5} 
-        alt="Magunas" 
-        className="img-fluid rounded shadow-lg" 
-        style={{ maxHeight: '360px', objectFit: 'cover', width: '90%' }} 
-      />
+        {/* ESG Pillars strip */}
+        <div
+          style={{
+            display: "flex",
+            gap: "1rem",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            marginBottom: "3rem",
+          }}
+        >
+          {pillars.map((p, i) => (
+            <div
+              key={i}
+              className={`reveal delay-${i + 1}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "0.6rem",
+                background: "var(--white)",
+                border: "1.5px solid rgba(7, 31, 16, 0.08)",
+                borderRadius: "var(--r-pill)",
+                padding: "0.6rem 1.25rem",
+                boxShadow: "var(--clay-sm)",
+                fontSize: "0.88rem",
+                fontWeight: 700,
+                color: "var(--text-700)",
+              }}
+            >
+              <i className={`bi ${p.icon}`} style={{ color: "var(--g-600)", fontSize: "1rem" }} />
+              {p.label}
+            </div>
+          ))}
         </div>
 
+        {/* Impact image + intro */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "3rem",
+            alignItems: "center",
+            marginBottom: "3rem",
+          }}
+          className="reveal"
+        >
+          <div
+            style={{
+              borderRadius: "var(--r-lg)",
+              overflow: "hidden",
+              boxShadow: "var(--clay-lg)",
+              border: "4px solid rgba(7, 31, 16, 0.08)",
+            }}
+          >
+            <img
+              src={pic5}
+              alt="Maguna-Andu Wholesalers ESG and Sustainability Program"
+              style={{ width: "100%", height: "320px", objectFit: "cover" }}
+            />
+          </div>
+          <div>
+            <div className="mg-section__label" style={{ color: "var(--g-600)" }}>Our Commitment</div>
+            <h3
+              style={{
+                fontFamily: "var(--font-head)",
+                fontSize: "clamp(1.5rem, 3vw, 2rem)",
+                fontWeight: 900,
+                color: "var(--text-900)",
+                marginBottom: "1rem",
+                letterSpacing: "-0.5px",
+              }}
+            >
+              Beyond Compliance
+            </h3>
+            <p style={{ color: "var(--text-500)", lineHeight: "1.75", marginBottom: "1.5rem" }}>
+              Our goal at Magunas is to go beyond compliance and create meaningful,
+              long-term sustainability. We continuously reassess our priorities to
+              stay impactful, future-forward, and responsible.
+            </p>
+            <p style={{ fontSize: "0.88rem", color: "var(--text-300)", fontStyle: "italic" }}>
+              "Maguna-Andu Wholesalers — Price for Growth."
+            </p>
+          </div>
         </div>
 
-        <h4 className="text-warning fw-bold fs-3">Incident Management Plan:</h4>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-          All workplace incidents must be reported within <strong>24 hours</strong>. Immediate investigation and action follow each incident, ensuring continuous learning and mitigation.
-        </p>
+        {/* Impact cards grid */}
+        <div className="mg-impact-grid">
+          {impactSections.map((sec, i) => (
+            <div className={`mg-impact-card reveal-zoom delay-${(i % 2) + 1}`} key={i}>
+              <div className="mg-impact-card__num">{sec.num} — {sec.title}</div>
+              <h3 className="mg-impact-card__title">{sec.title}</h3>
+              <ul className="mg-impact-card__list">
+                {sec.items.map((item, j) => (
+                  <li key={j}>{item}</li>
+                ))}
+              </ul>
+              {sec.note && (
+                <p style={{ marginTop: "1rem", fontSize: "0.85rem", color: "var(--g-600)", fontWeight: 600, lineHeight: 1.6 }}>
+                  <i className="bi bi-info-circle me-1" />
+                  {sec.note}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
-      
-
-      <div className="p-4 rounded mt-4 text-center" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-        <h2 className="text-warning fw-bold fs-2">2. Corporate Social Responsibility (CSR)</h2>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-          Magunas engages in community-driven initiatives that include:
-        </p>
-        <ul className="text-light text-start" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <li>Menstrual Hygiene Programs</li>
-          <li>Charity Activations and Donations</li>
-          <li>Coin Collection Drives</li>
-          <li>Sourcing 2 Equal Project (Gender Equality in Procurement)</li>
-        </ul>
       </div>
 
-      <div className="p-4 rounded mt-4 text-center" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-        <h2 className="text-warning fw-bold fs-2">3. Food Safety and Hygiene</h2>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-          Magunas prioritizes the safe procurement and distribution of food. We aim to exceed
-          customer expectations through strict food safety controls.
-        </p>
-        <ul className="text-light text-start" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <li>ISO 22000 Certification underway at select branches</li>
-          <li>Standardized Food Safety and Hygiene Protocols</li>
-          <li>Staff Training on Food Handling</li>
-        </ul>
-      </div>
-
-      <div className="p-4 rounded mt-4 text-center" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-        <h2 className="text-warning fw-bold fs-2">4. ESG Achievements</h2>
-        <ul className="text-light text-start" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <li>ESMS Training across branches</li>
-          <li>Fire Safety Awareness Programs</li>
-          <li>Traffic Control Training & Video Education</li>
-          <li>Annual Compliance Audits (Environment, OHS, Fire)</li>
-          <li>Statutory Risk Assessments</li>
-          <li>Mandatory OHS, Fire Safety & First Aid Training</li>
-          <li>Annual Electrical Installation Inspections</li>
-          <li>Workplace Registration and Renewals</li>
-          <li>Issuance of OHS Abstracts & General Registers</li>
-          <li>95% Medical Surveillance Coverage</li>
-          <li>PPE Program (Training and Distribution)</li>
-        </ul>
-      </div>
-
-      <div className="p-4 rounded mt-4 text-center" style={{ background: 'rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
-        <h2 className="text-warning fw-bold fs-2">Our Impact: Operating Today with the Future in Mind</h2>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}>
-          Our goal at Magunas is to go beyond compliance and create meaningful, long-term
-          sustainability. Our ESG efforts are aligned with the pillars of:
-        </p>
-        <ul className="text-light text-start" style={{ fontSize: '1.05rem', lineHeight: '1.8' }}>
-          <li>Environmental Management</li>
-          <li>Occupational Health & Safety</li>
-          <li>Corporate Social Responsibility</li>
-          <li>Food Safety</li>
-        </ul>
-        <p className="text-light" style={{ fontSize: '1.05rem', lineHeight: '1.6' }}><strong>
-          We continuously reassess our priorities to stay impactful, future-forward, and responsible.
-        </strong></p>
-      </div>
-      </div>
-
-      <footer className="text-center p-4" style={{ background: 'rgba(0,0,0,0.1)' }}>
-        <p className="text-success fs-5"><strong>Maguna-andu wholesalers – price for growth.</strong></p>
-      </footer>
-    </div>
+      <style>{`
+        @media (max-width: 768px) {
+          div[style*="grid-template-columns: 1fr 1fr"] {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 
