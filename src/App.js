@@ -9,7 +9,6 @@ import {
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { useEffect, useState, useCallback } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { Helmet } from "react-helmet-async";
 import { Analytics } from "@vercel/analytics/react";
 
 import Privacy from "./components/Privacy";
@@ -135,14 +134,6 @@ function App() {
 
   return (
     <div className="App">
-      <Helmet>
-        <title>Maguna-Andu Wholesalers | Quality & Value Every Day</title>
-        <meta
-          name="description"
-          content="Kenya's trusted wholesale partner since 1990. Serving Murang'a and beyond with quality groceries, household goods, and wholesale merchandise."
-        />
-        <link rel="canonical" href="https://maguna-anduwholesalers.com/" />
-      </Helmet>
 
       {/* ════════════════════════════════════════
           GLASSMORPHISM NAVBAR
@@ -232,7 +223,7 @@ function App() {
           <div className="mg-hero__left">
             <div className="mg-hero__badge">
               <span className="mg-hero__badge-dot" />
-              Kenya's Trusted Wholesale Partner
+             <h1> Kenya's Trusted Wholesale </h1>
             </div>
 
             <h1 className="mg-hero__title">
