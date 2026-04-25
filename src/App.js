@@ -205,7 +205,7 @@ function App() {
           <img
             key={activeImg}
             src={activeImg}
-            alt=""
+            alt="active images"
             className={`mg-hero__bg-img ${isSwitching ? "switching" : ""}`}
             loading="eager"
           />
