@@ -223,7 +223,7 @@ function App() {
           <div className="mg-hero__left">
             <div className="mg-hero__badge">
               <span className="mg-hero__badge-dot" />
-             <h1> Kenya's Trusted Wholesale </h1>
+             Kenya's Trusted Wholesale distributor
             </div>
 
             <h1 className="mg-hero__title">

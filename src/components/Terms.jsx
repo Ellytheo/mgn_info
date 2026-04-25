@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 const SECTIONS = [
   { id: "acceptance", label: "1. Acceptance of Terms" },
@@ -95,14 +94,6 @@ const Terms = () => {
 
   return (
     <div style={{ background: "var(--page-bg)", minHeight: "100vh" }}>
-      <Helmet>
-        <title>Terms of Service | Maguna-Andu Wholesalers</title>
-        <meta
-          name="description"
-          content="Read the Maguna-Andu Wholesalers Terms of Service. Governed by the laws of Kenya, including the Consumer Protection Act and Sale of Goods Act."
-        />
-        <link rel="canonical" href="https://maguna-anduwholesalers.com/terms" />
-      </Helmet>
       <style>{`
         /* Nav */
         .legal-nav { position: sticky; top: 0; z-index: 100; padding: 0.85rem 5%; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(90deg, rgba(14,40,25,0.96), rgba(26,61,40,0.96)); backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.08); }

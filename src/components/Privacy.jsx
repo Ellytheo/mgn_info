@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 const SECTIONS = [
   { id: "data-controller", label: "1. Data Controller" },
@@ -97,14 +96,6 @@ const Privacy = () => {
 
   return (
     <div style={{ background: "var(--page-bg)", minHeight: "100vh" }}>
-      <Helmet>
-        <title>Privacy Policy | Maguna-Andu Wholesalers</title>
-        <meta
-          name="description"
-          content="Review the Maguna-Andu Wholesalers Privacy Policy. Our commitment to protecting your personal data in compliance with the Kenya Data Protection Act (DPA 2019)."
-        />
-        <link rel="canonical" href="https://maguna-anduwholesalers.com/privacy" />
-      </Helmet>
       <style>{`
         .legal-page { background: var(--page-bg); min-height: 100vh; }
 
