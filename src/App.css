@@ -271,8 +271,9 @@ img {
   .mg-nav__links {
     position: absolute;
     top: calc(100% + 0.5rem);
-    left: 1rem;
-    right: 1rem;
+    left: auto;
+    right: 5%;
+    min-width: 220px;
     flex-direction: column;
     gap: 0.25rem;
     background: rgba(7, 31, 16, 0.96);
@@ -294,8 +295,8 @@ img {
 
   .mg-nav__link {
     width: 100%;
-    text-align: center;
-    padding: 0.65rem;
+    text-align: right;
+    padding: 0.65rem 1rem;
   }
 
   .mg-nav__cta {
