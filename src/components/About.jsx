@@ -71,14 +71,16 @@ const About = () => {
           }}
         >
           <div className="mg-blockquote reveal reveal-left">
-            In the early days, we strived to build a wholesale and retail network that
-            truly met the needs of the mwananchi. That goal still guides us today.
+            When I started selling at Mukuyu market in Murang'a, I made one simple promise —
+            to give every Kenyan access to quality products at a price they could afford.
+            That promise is the heartbeat of everything we have built over the past 30 years.
             <cite>— Simon Wachira, Founder</cite>
           </div>
           <div className="mg-blockquote reveal reveal-right">
-            In the early days, we set out to build something that worked for every
-            Kenyan. That vision still drives everything we do.
-            <cite>— John Mwangi, DIRECTOR</cite>
+            Our father built this company on trust and hard work. My responsibility is to carry
+            that forward — expanding our reach, embracing new ideas, and ensuring every customer
+            who walks into a Maguna-andu wholesalers leaves satisfied and delighted.
+            <cite>— John Mwangi, Director</cite>
           </div>
         </div>
       </div>

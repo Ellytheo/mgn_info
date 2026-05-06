@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
 import pic2 from "../productsimages/mn-21.jpeg";
+import BrandsTicker from "./BrandsTicker";
 
 /* Icons via lucide-react style — using Bootstrap Icons instead (already imported) */
 
@@ -111,7 +112,8 @@ const Home = () => {
         </div>
       </section>
 
-
+      {/* Partner Brands Ticker — appears right after How It All Began */}
+      <BrandsTicker />
 
       {/* ════════════════════════════════════════
           WHAT DO WE DO — Claymorphism cards
@@ -238,6 +240,9 @@ const Home = () => {
           <style>{`
             @media (max-width: 768px) {
               .mg-mission-grid { grid-template-columns: 1fr !important; }
+              div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+              }
             }
           `}</style>
         </div>

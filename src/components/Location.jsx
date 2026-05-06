@@ -12,7 +12,7 @@ const Location = () => {
             Visit Our <em>Store</em>
           </h2>
           <p className="mg-section__desc reveal delay-2">
-            Located in the heart of Murang'a Town oppossite MUWASCO offices . Walk in any day
+            Located in the heart of Murang'a Town opposite MUWASCO offices. Walk in any day
             and experience the quality and variety that has served Kenya for 30+ years.
           </p>
         </div>
@@ -29,7 +29,7 @@ const Location = () => {
           className="reveal"
         >
           {[
-            { icon: 'bi-geo-alt-fill', text: "Murang'a Town OPP MUWASCO offices" },
+            { icon: 'bi-geo-alt-fill', text: "Murang'a Town, opposite MUWASCO Offices" },
             { icon: 'bi-telephone-fill', text: '+254 795 629 890' },
             { icon: 'bi-clock-fill', text: 'Mon – Sat: 7:00 AM – 5:00 PM' },
             { icon: 'bi-envelope-fill', text: 'customercaregd@maguna-andu.co.ke' },

@@ -7,20 +7,23 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState, useCallback, lazy, Suspense } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Analytics } from "@vercel/analytics/react";
 
 import Privacy from "./components/Privacy";
 import Terms from "./components/Terms";
-import Impact from "./components/Impact";
 import Home from "./components/Home";
-import About from "./components/About";
-import Location from "./components/Location";
+import Testimonials from "./components/Testimonials";
+import NotFound from "./components/NotFound";
 import downloadImg from "./images/pic5.jpg";
 import heroMain from "./productsimages/mn-21.jpeg";
 import heroBack from "./productsimages/mn-20.jpg";
 import heroSide from "./productsimages/mn-80.jpg";
+
+import Impact from "./components/Impact";
+import About from "./components/About";
+import Location from "./components/Location";
 
 const heroImages = [
   { src: heroMain, label: "Main Branch" },
@@ -63,11 +66,27 @@ function AppWrapper() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Standalone legal pages — no main site layout */}
+        {/* Standalone legal pages */}
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/terms" element={<Terms />} />
-        {/* Everything else → full main site layout */}
-        <Route path="/*" element={<App />} />
+        {/* Admin portal */}
+        <Route
+          path="/wp-administration"
+          element={
+            <div style={{ padding: "6rem 5%", minHeight: "60vh" }}>
+              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", color: "var(--g-700)" }}>
+                Admin Portal
+              </h2>
+              <p style={{ color: "var(--text-500)", marginTop: "0.5rem" }}>
+                Administrative tools coming soon.
+              </p>
+            </div>
+          }
+        />
+        {/* Main site */}
+        <Route path="/" element={<App />} />
+        {/* 404 catch-all */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
@@ -108,7 +127,7 @@ function App() {
       const currentIndex = heroImages.findIndex(img => img.src === activeImg);
       const nextIndex = (currentIndex + 1) % heroImages.length;
       updateHeroImg(heroImages[nextIndex].src);
-    }, 15000);
+    }, 7000);
     return () => clearInterval(interval);
   }, [activeImg, updateHeroImg]);
 
@@ -205,7 +224,7 @@ function App() {
           <img
             key={activeImg}
             src={activeImg}
-            alt="active images"
+            alt={`Maguna-Andu Wholesalers — ${heroImages.find(h => h.src === activeImg)?.label ?? "Store"}`}
             className={`mg-hero__bg-img ${isSwitching ? "switching" : ""}`}
             loading="eager"
           />
@@ -332,23 +351,12 @@ function App() {
       {/* ════════════════════════════════════════
           ROUTES (Admin page only)
           ════════════════════════════════════════ */}
+      {/* Inner route — keeps scroll-based single page working at root */}
       <Routes>
-        {/* Root route — renders null (main content is above, outside Routes) */}
         <Route path="/" element={null} />
-        <Route
-          path="/wp-administration"
-          element={
-            <div style={{ padding: "6rem 5%", minHeight: "60vh" }}>
-              <h2 style={{ fontFamily: "var(--font-head)", fontSize: "2rem", color: "var(--g-700)" }}>
-                Admin Portal
-              </h2>
-              <p style={{ color: "var(--text-500)", marginTop: "0.5rem" }}>
-                Administrative tools coming soon.
-              </p>
-            </div>
-          }
-        />
       </Routes>
+
+      <Testimonials />
 
       {/* ════════════════════════════════════════
           PROFESSIONAL DARK FOOTER
@@ -369,7 +377,7 @@ function App() {
             </p>
             <div className="mg-footer__contact-item">
               <i className="bi bi-geo-alt-fill" />
-              Murang'a Town,oppossite MUWASCO Murang'a
+              Murang'a Town, opposite MUWASCO, Murang'a
             </div>
             <div className="mg-footer__contact-item">
               <i className="bi bi-telephone-fill" />
