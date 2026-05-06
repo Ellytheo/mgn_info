@@ -7,7 +7,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useEffect, useState, useCallback, lazy, Suspense } from "react";
+import { useEffect, useState, useCallback, } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Analytics } from "@vercel/analytics/react";
 
