@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 
 const reviews = [
-  { initials: "JK", name: "James Kariuki", role: "Retailer, Murang'a Town", stars: 5, text: "I have been stocking my shop from Magunas for over 10 years. The prices are unbeatable and the variety is incredible. Their staff always go the extra mile." },
-  { initials: "FW", name: "Faith Wanjiru", role: "Household Customer, Kenol", stars: 5, text: "Shopping at Magunas feels like family. You walk in and you are welcomed. The freshness of their products and their affordable prices keep me coming back every week." },
-  { initials: "PM", name: "Peter Mwangi", role: "Small Business Owner, Murang'a", stars: 5, text: "As a small business owner, finding a reliable wholesale supplier was a challenge — until I discovered Magunas. They have been our backbone for 7 years running." },
-  { initials: "GN", name: "Grace Njoki", role: "Caterer, Thika", stars: 5, text: "The range of products, especially cooking oils and dry goods, is outstanding. I source all my bulk ingredients from Magunas and have never been disappointed." },
-  { initials: "DK", name: "David Kamau", role: "School Supplier, Kirinyaga", stars: 5, text: "Supplying schools requires consistency and trust. Magunas has delivered on both counts every single time. Their delivery fleet is fast and the products are always fresh." },
-  { initials: "AW", name: "Anne Wairimu", role: "Kiosk Owner, Sagana", stars: 5, text: "Prices For Growth is not just a tagline — it is a reality I experience every time I restock. My kiosk profits have grown because of the margins I get at Magunas." },
+  { initials: "JK", name: "James Kariuki", role: "Retailer, Murang'a Town", stars: 5, text: "I have been stocking my shop from Maguna-Andu for over 10 years. The prices are unbeatable and the variety is incredible. Their staff always go the extra mile." },
+  { initials: "FW", name: "Faith Wanjiru", role: "Household Customer, Kenol", stars: 5, text: "Shopping at Maguna-Andu feels like family. You walk in and you are welcomed. The freshness of their products and their affordable prices keep me coming back every week." },
+  { initials: "PM", name: "Peter Mwangi", role: "Small Business Owner, Murang'a", stars: 5, text: "As a small business owner, finding a reliable wholesale supplier was a challenge — until I discovered Maguna-Andu. They have been our backbone for 7 years running." },
+  { initials: "GN", name: "Grace Njoki", role: "Caterer, Thika", stars: 5, text: "The range of products, especially cooking oils and dry goods, is outstanding. I source all my bulk ingredients from Maguna-Andu and have never been disappointed." },
+  { initials: "DK", name: "David Kamau", role: "School Supplier, Kirinyaga", stars: 5, text: "Supplying schools requires consistency and trust. Maguna-Andu has delivered on both counts every single time. Their delivery fleet is fast and the products are always fresh." },
+  { initials: "AW", name: "Anne Wairimu", role: "Kiosk Owner, Sagana", stars: 5, text: "Prices For Growth is not just a tagline — it is a reality I experience every time I restock. My kiosk profits have grown because of the margins I get at Maguna-Andu." },
 ];
 
 // slides are now computed dynamically inside the component based on screen size

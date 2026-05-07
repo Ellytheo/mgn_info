@@ -149,7 +149,7 @@ const Impact = () => {
               Beyond Compliance
             </h3>
             <p style={{ color: "var(--text-500)", lineHeight: "1.75", marginBottom: "1.5rem" }}>
-              Our goal at Magunas is to go beyond compliance and create meaningful,
+              Our goal at Maguna-Andu is to go beyond compliance and create meaningful,
               long-term sustainability. We continuously reassess our priorities to
               stay impactful, future-forward, and responsible.
             </p>

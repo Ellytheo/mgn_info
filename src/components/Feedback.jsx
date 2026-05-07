@@ -83,7 +83,7 @@ const Feedback = () => {
       <div className="mb-4">
         <h5 className="text-warning fw-bold">What Can You Give Feedback About?</h5>
         <p style={{ fontSize: '18px' }}>
-          We welcome feedback about any interaction with <strong>Magunas Murang'a Godown</strong> — your product experience, shopping, or e-commerce.
+          We welcome feedback about any interaction with <strong>Maguna-Andu Murang'a Godown</strong> — your product experience, shopping, or e-commerce.
           Provide as many details as possible. <strong>All feedback is anonymous.</strong>
         </p>
       </div>

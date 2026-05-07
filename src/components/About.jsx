@@ -4,22 +4,22 @@ const storyCards = [
   {
     num: "01",
     title: "Our Business",
-    text: "Founded in early 1990, Magunas has grown into a trusted name in wholesale and distribution across Kenya. With a steadily growing network of outlets, we've built our reputation on reliability, affordability, and community connection. We proudly employ thousands of Kenyans united by a shared vision.",
+    text: "Founded in early 1975, Maguna-Andu has grown into a trusted name in wholesale and distribution across Kenya. With a steadily growing network of outlets, we've built our reputation on reliability, affordability, and community connection. We proudly employ thousands of Kenyans united by a shared vision.",
   },
   {
     num: "02",
     title: "Our Leadership",
-    text: "Under the leadership of John Mwangi, son of founder Simon Wachira, Magunas is pushing forward with fresh ideas, community-first values, and a dedication to operational excellence. John has been groomed within the business and brings a new generation's energy to the company's continued expansion.",
+    text: "Under the leadership of John Mwangi, son of founder Simon Wachira, Maguna-Andu is pushing forward with fresh ideas, community-first values, and a dedication to operational excellence. John has been groomed within the business and brings a new generation's energy to the company's continued expansion.",
   },
   {
     num: "03",
     title: "Our Founding Story",
-    text: "Magunas was founded by Simon Wachira in 1990. His journey began as a hawker at Mukuyu market in Murang'a. Through hard work and vision, he grew from street vending to owning a small shop — which became the first outlet of what would become a respected wholesale empire across Central Kenya.",
+    text: "Maguna-Andu was founded by Simon Wachira in 1975. His journey began as a hawker at Mukuyu market in Murang'a. Through hard work and vision, he grew from street vending to owning a small shop — which became the first outlet of what would become a respected wholesale empire across Central Kenya.",
   },
   {
     num: "04",
     title: "Community Impact",
-    text: "At Magunas, we understand that our business touches lives far beyond transactions. We actively support farmers, small-scale manufacturers, youth, and community programs that create positive change across Kenya.",
+    text: "At Maguna-Andu, we understand that our business touches lives far beyond transactions. We actively support farmers, small-scale manufacturers, youth, and community programs that create positive change across Kenya.",
   },
   {
     num: "05",
@@ -28,8 +28,8 @@ const storyCards = [
   },
   {
     num: "06",
-    title: "Magunas Accolades",
-    text: "Thank you for making Magunas one of Kenya's most trusted wholesale and retail brands. With 30+ years of experience and continued national growth, we're committed to serving you even better.",
+    title: "Maguna-Andu Accolades",
+    text: "Thank you for making Maguna-Andu one of Kenya's most trusted wholesale and retail brands. With 50 yrs of experience and continued national growth, we're committed to serving you even better.",
   },
 ];
 
@@ -41,10 +41,10 @@ const About = () => {
         <div className="mg-section__header mg-section__header--center">
           <div className="mg-section__label reveal">About Us</div>
           <h2 className="mg-section__title reveal delay-1">
-            Over <i className="mg-story-card__num">30 Years</i> of Service to Kenyans
+            Over <i className="mg-story-card__num">50 Yrs</i> of Service to Kenyans
           </h2>
           <p className="mg-section__desc">
-            Magunas Wholesalers and Distributors is a proudly Kenyan, family-owned business.
+            Maguna-Andu Wholesalers and Distributors is a proudly Kenyan, family-owned business.
             At our core is a deep commitment to exceeding customer expectations —
             guided by our principle: <em>"We exist to make other people's lives better."</em>
           </p>
@@ -73,7 +73,7 @@ const About = () => {
           <div className="mg-blockquote reveal reveal-left">
             When I started selling at Mukuyu market in Murang'a, I made one simple promise —
             to give every Kenyan access to quality products at a price they could afford.
-            That promise is the heartbeat of everything we have built over the past 30 years.
+            That promise is the heartbeat of everything we have built over the past 50 yrs.
             <cite>— Simon Wachira, Founder</cite>
           </div>
           <div className="mg-blockquote reveal reveal-right">

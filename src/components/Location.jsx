@@ -13,7 +13,7 @@ const Location = () => {
           </h2>
           <p className="mg-section__desc reveal delay-2">
             Located in the heart of Murang'a Town opposite MUWASCO offices. Walk in any day
-            and experience the quality and variety that has served Kenya for 30+ years.
+            and experience the quality and variety that has served Kenya for 50 yrs.
           </p>
         </div>
 

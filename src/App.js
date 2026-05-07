@@ -251,7 +251,7 @@ function App() {
             </h1>
 
             <p className="mg-hero__sub">
-              Serving Kenyans for over <strong>30 years</strong> — from our humble
+              Serving Kenyans for over <strong>50 yrs</strong> — from our humble
               beginnings in Murang'a to a nationwide wholesale &amp; retail
               network you can trust.
             </p>
@@ -279,7 +279,7 @@ function App() {
 
             <div className="mg-hero__stats">
               <div className="mg-stat-pill">
-                <span className="mg-stat-pill__value">30+</span>
+                <span className="mg-stat-pill__value">50+</span>
                 <span className="mg-stat-pill__label">Years</span>
               </div>
               <div className="mg-stat-pill">
@@ -309,7 +309,7 @@ function App() {
               />
               <div className="mg-hero__card-label">
                 <i className="bi bi-shop me-2" />
-                Maguna-Andu Wholesalers — Est. 1990
+                Maguna-Andu Wholesalers — Est. 1975
               </div>
             </div>
 
@@ -372,7 +372,7 @@ function App() {
               </span>
             </div>
             <p className="mg-footer__tagline">
-              Trusted by Kenya for over three decades. Quality groceries,
+              Trusted by Kenya for over five decades. Quality groceries,
               household goods &amp; wholesale merchandise at prices that make sense.
             </p>
             <div className="mg-footer__contact-item">
@@ -440,7 +440,7 @@ function App() {
                 </span>
                 <span style={{ fontSize: "0.82rem", color: "rgba(255,255,255,0.45)", display: "flex", gap: "0.5rem", alignItems: "center" }}>
                   <i className="bi bi-award" style={{ color: "var(--amber-light)" }} />
-                  Est. 1990 — 30+ Years
+                  Est. 1975 — 50 yrs
                 </span>
               </div>
             </div>

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs/lib/anime.es.js";
-import pic2 from "../productsimages/mn-21.jpeg";
+import pic2 from "../images/pc-2.jpeg";
 import BrandsTicker from "./BrandsTicker";
 
 /* Icons via lucide-react style — using Bootstrap Icons instead (already imported) */
@@ -105,7 +105,7 @@ const Home = () => {
             >
               <img src={pic2} alt="Maguna-Andu Wholesalers original storefront in Murang'a" style={{ width: "100%", height: "420px", objectFit: "cover" }} />
               <div className="mg-hero__card-label" style={{ background: "rgba(7,31,16,0.85)", backdropFilter: "blur(8px)" }}>
-                <i className="bi bi-calendar-event me-2" /> Since 1990 — A Legacy of Trust
+                <i className="bi bi-calendar-event me-2" /> Since 1975 — A Legacy of Trust
               </div>
             </div>
           </div>
