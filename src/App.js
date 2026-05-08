@@ -283,7 +283,7 @@ function App() {
                 <span className="mg-stat-pill__label">Years</span>
               </div>
               <div className="mg-stat-pill">
-                <span className="mg-stat-pill__value">5+</span>
+                <span className="mg-stat-pill__value">8+</span>
                 <span className="mg-stat-pill__label">Branches</span>
               </div>
               <div className="mg-stat-pill">

@@ -227,7 +227,7 @@ const Home = () => {
                   flexWrap: "wrap",
                 }}
               >
-                {[["KSh B+", "Revenue Impact"], ["1000s", "Jobs Created"], ["35+", "Counties Served"]].map(([val, lbl]) => (
+                {[["KSh B+", "Revenue Impact"], ["1000s", "Jobs Created"], ["8+", "Strategic Branches"]].map(([val, lbl]) => (
                   <div key={lbl}>
                     <div style={{ fontFamily: "var(--font-head)", fontSize: "1.5rem", fontWeight: 900, color: "#fff" }}>{val}</div>
                     <div style={{ fontSize: "0.72rem", fontWeight: 700, letterSpacing: "1.5px", textTransform: "uppercase", color: "rgba(255,255,255,0.45)", marginTop: "2px" }}>{lbl}</div>
