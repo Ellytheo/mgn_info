@@ -30,7 +30,7 @@ const Location = () => {
         >
           {[
             { icon: 'bi-geo-alt-fill', text: "Murang'a Town, opposite MUWASCO Offices" },
-            { icon: 'bi-telephone-fill', text: '+254 795 629 890' },
+            { icon: 'bi-telephone-fill', text: '+254 703 582 787' },
             { icon: 'bi-clock-fill', text: 'Mon – Sat: 7:00 AM – 5:00 PM' },
             { icon: 'bi-envelope-fill', text: 'customercaregd@maguna-andu.co.ke' },
           ].map((item, i) => (
@@ -104,7 +104,7 @@ const Location = () => {
             <i className="bi bi-map-fill" /> Open in Google Maps
           </a>
           <a
-            href="https://wa.me/254795629890"
+            href="https://wa.me/254703582787"
             target="_blank"
             rel="noreferrer"
             className="btn-mg-outline"

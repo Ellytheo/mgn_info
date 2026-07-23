@@ -17,7 +17,7 @@ const NotFound = () => (
           <i className="bi bi-house-fill" /> Back to Home
         </Link>
         <a
-          href="https://wa.me/254795629890"
+          href="https://wa.me/254703582787"
           target="_blank"
           rel="noreferrer"
           className="btn-mg-outline"
@@ -27,7 +27,7 @@ const NotFound = () => (
       </div>
       <p className="mg-notfound__contact">
         Need help?{" "}
-        <a href="tel:+254795629890">Call +254 795 629 890</a>
+        <a href="tel:+254703582787">Call +254 703 582 787</a>
       </p>
     </div>
   </div>

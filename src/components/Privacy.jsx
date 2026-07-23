@@ -269,7 +269,7 @@ const Privacy = () => {
                   ["Physical Address", "Murang'a Town, opposite MUWASCO, Murang'a County, Kenya"],
                   ["Customer Email", "customercaregd@maguna-andu.co.ke"],
                   ["Sales Email", "salesteam@maguna-andu.co.ke"],
-                  ["Phone", "+254 795 629 890"],
+                  ["Phone", "+254 703 582 787"],
                 ].map(([k, v]) => (
                   <li key={k} style={{ display: "flex", gap: "0.75rem", fontSize: "0.88rem" }}>
                     <span style={{ fontWeight: 700, color: "var(--text-900)", minWidth: "130px", flexShrink: 0 }}>{k}:</span>
@@ -472,7 +472,7 @@ const Privacy = () => {
                   ["bi-building", "Maguna-Andu Wholesalers (K) Ltd"],
                   ["bi-geo-alt", "Murang'a Town, opposite MUWASCO, Murang'a County"],
                   ["bi-envelope", "customercaregd@maguna-andu.co.ke"],
-                  ["bi-telephone", "+254 795 629 890"],
+                  ["bi-telephone", "+254 703 582 787"],
                 ].map(([icon, val]) => (
                   <div key={val} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start", marginBottom: "0.65rem", fontSize: "0.9rem", color: "rgba(255,255,255,0.78)" }}>
                     <i className={`bi ${icon}`} style={{ color: "var(--amber-light)", marginTop: "2px", flexShrink: 0 }} />

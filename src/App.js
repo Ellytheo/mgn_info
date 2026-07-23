@@ -199,7 +199,7 @@ function App() {
               Logout
             </button>
           )}
-          <a href="tel:+254795629890" className="mg-nav__cta">
+          <a href="tel:+254703582787" className="mg-nav__cta">
             <i className="bi bi-telephone-fill" />
             Call Us
           </a>
@@ -381,7 +381,7 @@ function App() {
             </div>
             <div className="mg-footer__contact-item">
               <i className="bi bi-telephone-fill" />
-              <a href="tel:+254795629890">+254 795 629 890</a>
+              <a href="tel:+254703582787">+254 703 582 787</a>
             </div>
             <div className="mg-footer__contact-item">
               <i className="bi bi-envelope-fill" />
@@ -417,7 +417,7 @@ function App() {
             <ul className="mg-footer__links">
               <li><RouterLink to="/privacy" className="mg-footer__link">Privacy Policy</RouterLink></li>
               <li><RouterLink to="/terms" className="mg-footer__link">Terms of Service</RouterLink></li>
-              <li><a href="https://wa.me/254795629890" target="_blank" rel="noreferrer" className="mg-footer__link">Report a Route</a></li>
+              <li><a href="https://wa.me/254703582787" target="_blank" rel="noreferrer" className="mg-footer__link">Report a Route</a></li>
               <li><span className="mg-footer__link">Safety Tips</span></li>
             </ul>
           </div>
@@ -426,10 +426,10 @@ function App() {
           <div>
             <h5 className="mg-footer__col-title">Follow Us</h5>
             <div className="mg-footer__social">
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-facebook" /></a>
-              <a href="https://x.com" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-twitter-x" /></a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-instagram" /></a>
-              <a href="https://wa.me/254795629890" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-whatsapp" /></a>
+<a href="https://facebook.com" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-facebook" /></a>
+              <a href="https://www.tiktok.com/@maguna_anduwholesalers.k?_r=1&_t=ZS-96tkQzMjQW1" target="_blank" rel="noreferrer" className="mg-footer__social-icon" aria-label="TikTok"><i className="bi bi-tiktok" /></a>
+              <a href="https://www.instagram.com/maguna_anduwholesalers_ke?igsh=YTZld3F1bHRwNDFq&utm_source=qr" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-instagram" /></a>
+              <a href="https://wa.me/254703582787" target="_blank" rel="noreferrer" className="mg-footer__social-icon"><i className="bi bi-whatsapp" /></a>
             </div>
             <div style={{ marginTop: "1.5rem" }}>
               <h5 className="mg-footer__col-title">Certification</h5>
@@ -461,7 +461,7 @@ function App() {
           WHATSAPP FLOAT BUTTON
           ════════════════════════════════════════ */}
       <a
-        href="https://wa.me/254795629890"
+        href="https://wa.me/254703582787"
         target="_blank"
         rel="noreferrer"
         className="mg-wa-float"
