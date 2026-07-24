@@ -1147,13 +1147,15 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  transition: box-shadow 0.35s ease, transform 0.35s var(--ease-spring);
+  transition: box-shadow 0.35s ease, transform 0.35s var(--ease-spring), border-color 0.35s ease;
   cursor: default;
+  position: relative;
 }
 
 .mg-mantra-pill:hover {
-  box-shadow: var(--clay-hover);
-  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 20px 40px rgba(26, 92, 56, 0.22), 0 10px 20px rgba(245, 166, 35, 0.15), var(--clay-hover);
+  transform: translateY(-8px) rotate(-1deg) scale(1.03);
+  border-color: var(--g-400);
 }
 
 .mg-mantra-pill__icon {
