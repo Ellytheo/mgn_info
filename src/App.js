@@ -172,9 +172,11 @@ function App() {
             <ScrollLink
               key={l.id}
               to={l.id}
-              smooth
+              spy={true}
+              smooth={true}
               duration={500}
               offset={-80}
+              activeClass="active"
               className="mg-nav__link"
               onClick={() => setMenuOpen(false)}
             >
